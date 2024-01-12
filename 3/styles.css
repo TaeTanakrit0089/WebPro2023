@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    background-image: url("../stone.gif");
+    font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.body_container {
+    margin: 0 auto;
+    padding: 22px 0;
+    max-width: 1080px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+.table-container {
+    align-items: center;
+}
+
+thead th {
+    font-weight: 600;
+}
+
+thead tr {
+    background-color: rgba(219, 255, 255, 0.495);
+
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+    min-width: 50px;
+    font-weight: 300;
+}
+
+
+.body_container div {
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.bar_container {
+    width: 480px;
+
+}
+
+.bar_container div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+#row1 {
+    background-color: rgb(244, 255, 252);
+    width: 60%;
+}
+
+#row2 {
+    background-color: rgb(255, 254, 244);
+    width: 90%;
+}
+
+#row3 {
+    background-color: rgb(255, 238, 238);
+    width: 50%;
+}
+
+#row4 {
+    background-color: rgb(238, 244, 255);
+    width: 80%;
+}
+
+#row5 {
+    background-color: rgb(255, 255, 255);
+    width: 75%;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 22px;
+    justify-content: center;
+}
+
+
+.sook_header {
+    width: 100%;
+}
+
+.sook_north {
+    background: #2242A6;
+    max-height: 35px;
+}
+
+.sook_south {
+    background: orange;
+    height: 0.5vh;
+}
+
+.sook_text {
+    font-size: 90%;
+    font-family: "Helvetica Neue", serif;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    height: 100%;
+    margin-top: -7px;
+}

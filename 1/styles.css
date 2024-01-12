@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    background-image: url("../stone.gif");
+    font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.body_container {
+    margin: 0 auto;
+    padding: 22px 0;
+    max-width: 1290px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.img_container {
+    background-color: white;
+    border-radius: 22px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.img_container img {
+    margin: 0 64px;
+}
+
+#life {
+    padding: 0 44px;
+}
+
+
+.sook_header {
+    width: 100%;
+}
+
+.sook_north {
+    background: #2242A6;
+    max-height: 35px;
+}
+
+.sook_south {
+    background: orange;
+    height: 0.5vh;
+}
+
+.sook_text {
+    font-size: 90%;
+    font-family: "Helvetica Neue", serif;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    height: 100%;
+    margin-top: -7px;
+}
