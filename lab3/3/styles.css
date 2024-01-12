@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.topnav {
+    /* background-color:; */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.sook_header {
+    width: 100%;
+}
+
+.sook_north {
+    background: #2242A6;
+    max-height: 55px;
+}
+
+.sook_south {
+    background: orange;
+    height: 0.5vh;
+}
+
+.sook_text {
+    font-size: 85%;
+    font-family: "Helvetica Neue", serif;
+    font-weight: 600;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    height: 100%;
+    /* margin-top: 0px; */
+}
+
+.emailspin {
+    padding: 10px 20px;
+}
+
+
+.blur-effect {
+    --colornav-backdrop-filter-opacity: 1;
+    --colornav-bg-alpha: .8;
+    backdrop-filter: blur(22px) saturate(1.86);
+    -webkit-backdrop-filter: blur(15px) saturate(86%);
+    backface-visibility: hidden;
+    background: rgba(245, 245, 247, .82);
+    opacity: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+
+body {
+    background-image: url("../stone.gif");
+    font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.body_container {
+    margin: 0 auto;
+    padding: 22px;
+    max-width: 1290px;
+}
+
+#bar_container p {
+    margin: 0;
+}
+
+#bar_container .name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#bar_container .score {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#bar_container div {
+    width: 150px;
+    border-radius: 12px;
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #e1f1fd;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: width 1.5s ease-in-out;
+}
+
+
+
