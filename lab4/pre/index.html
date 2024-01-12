@@ -12,15 +12,14 @@
 </head>
 
 <body>
-
 <nav class="topnav">
     <div class="sook_north">
         <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
     </div>
     <div class="sook_south"></div>
 </nav>
-<div id="body_container" class="" style="margin-top: 31px">
-    <p id="p1">This is paragraph</p>
+<div class="" id="body_container" style="margin-top: 31px">
+    <p id="pp1">This is paragraph</p>
 
     <script>
         let pt = document.createElement("p");
@@ -33,12 +32,83 @@
     <script>
         let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-        let pElement = document.createElement("p");
+        let ol1 = document.createElement("ol");
+        ol1.id = "ole";
 
+        days.forEach((day) => {
+            let lix = document.createElement("li");
+            lix.innerHTML = day;
+            ol1.appendChild(lix);
+        })
+
+        document.getElementById("body_container").appendChild(ol1);
     </script>
+
+    <br>
+    <section>
+
+        <div id="div1">
+            <p id="p1">JavaScript</p>
+            <p id="p2">Python</p>
+            <p id="p3">TypeScript</p>
+            <!-- add a new element here -->
+        </div>
+        <hr>
+        <div id="div2">
+            <p>My favourite fruit.</p>
+        </div>
+
+
+        <button type="button" onclick="addNode()">Add Node</button>
+        <button type="button" onclick="deleteNode()">Delete Node</button>
+        <button type="button" onclick="addNewImage()">Add Image</button>
+
+        <script>
+            function addNode() {
+                // <p>a new paragraph</p>
+                let ptag = document.createElement("p");
+                // create text node
+                let txt = document.createTextNode("a new paragraph");
+                // append text node to a parent node
+                // select a parent node
+                let parent1 = document.getElementById("div1");
+                // append element node to a parent node
+
+                /*  uncomment in step 2 **/
+                let childP1 = document.getElementById("p1");
+                parent1.insertBefore(ptag, childP1);
+
+            }
+
+            function addNewImage() {
+                // <img src="apples.jpg">
+                let imgtag = document.createElement("img");
+
+                let srcAttr = document.createAttribute("src");
+                srcAttr.value = "apples.jpg";
+                let widthArr = document.createAttribute("width");
+                widthArr.value = "400";
+                imgtag.setAttributeNode(srcAttr);
+                imgtag.setAttributeNode(widthArr);
+                imgtag.style.borderRadius = "12px";
+                imgtag.style.margin = "6px";
+                // method 2
+                //imgtag.setAttribute('src', 'apples.jpg');
+
+                // add to <body>
+                document.getElementById("div2").appendChild(imgtag);
+            }
+
+            function deleteNode() {
+                let parent2 = document.getElementById("div1");
+                let delPtag = document.getElementById("p1");
+                parent2.removeChild(delPtag);
+            }
+        </script>
+    </section>
 </div>
 
-<div align="right" class="emailspin"><img border="0" src="/assets/emailspin.gif" alt=""><br>
+<div align="right" class="emailspin"><img alt="" border="0" src="/assets/emailspin.gif"><br>
     65070089@kmitl.ac.th<br>
     Any problem with the website, feel free to contact me.
 </div>
