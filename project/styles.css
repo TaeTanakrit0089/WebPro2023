@@ -92,15 +92,15 @@ body {
     border-radius: 22px;
     margin: 0 12px;
     min-height: 400px;
-    padding: 22px 32px 20px!important;
+    padding: 22px 32px 20px !important;
 }
 
-.html-history{
+.html-history {
     width: 50%;
 }
 
 
-.html-small-box{
+.html-small-box {
     /*border: 1px solid black;*/
     border-radius: 12px;
     padding: 12px;
