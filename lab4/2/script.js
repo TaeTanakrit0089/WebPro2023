@@ -34,7 +34,7 @@ function changeLanguage() {
         titleElement.textContent = 'Laew Tae App Membership Application Form';
 
         nameTitle.textContent = 'Name:';
-        nameInput.placeholder = '์Name:';
+        nameInput.placeholder = '์Name';
 
         surnameTitle.textContent = 'Surname:';
         surnameInput.placeholder = 'Surname';
