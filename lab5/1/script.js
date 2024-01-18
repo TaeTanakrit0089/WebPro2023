@@ -23,10 +23,8 @@ function convertCsvToJson(csv) {
         const values = lines[i].split(',').map(value => value.trim());
 
         const record = {};
-        for (let j = 0; j < headers.length; j++) {
+        for (let j = 0; j < headers.length; j++)
             record[customHeaders[j]] = values[j];
-        }
-
         jsonData.push(record);
     }
 
