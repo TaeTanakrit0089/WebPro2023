@@ -7,7 +7,7 @@ fetch(csvFilePath)
         const jsonData = convertCsvToJson(csvData);
         console.log(jsonData);
 
-        // You can use jsonData as needed (e.g., send it to a server, display it, etc.)
+        addElementstoResult(jsonData);
     })
     .catch(error => console.error('Error fetching or converting CSV file:', error));
 
@@ -31,4 +31,12 @@ function convertCsvToJson(csv) {
     }
 
     return jsonData;
+}
+
+function addElementstoResult(elements) {
+    for (let i = 0; i < elements.length; i++) {
+        const pTag = document.createElement('p');
+        pTag.innerHTML = `${elements[i].id}.) <b>${elements[i].firstName} ${elements[i].lastName}</b> (${elements[i].gender}) is a ${elements[i].position} at ${elements[i].address}`;
+        document.getElementById("result").appendChild(pTag);
+    }
 }
