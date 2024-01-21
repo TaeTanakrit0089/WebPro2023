@@ -1,118 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="#2242A6" name="theme-color">
-    <title>65070089 - Fundamental Web Programming Lab.</title>
-    <link href="styles.css?v=1.0" rel="stylesheet">
-    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
 <body>
-<nav class="topnav">
-    <div class="sook_north">
-        <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
-    </div>
-    <div class="sook_south"></div>
-</nav>
-<div class="" id="body_container" style="margin-top: 31px">
-    <p id="pp1">This is paragraph</p>
+<p id="out"></p>
 
-    <script>
-        let pt = document.createElement("p");
-        let tx = document.createTextNode("This is a new node");
-        pt.appendChild(tx);
+<script>
+    getRemoteData("superheroes.json");
 
-        document.getElementById("body_container").appendChild(pt)
-    </script>
+    async function getRemoteData(url) {
+        let datObject = await fetch(url);
+        let superheroes = await datObject.json();
 
-    <script>
-        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-        let ol1 = document.createElement("ol");
-        ol1.id = "ole";
-
-        days.forEach((day) => {
-            let lix = document.createElement("li");
-            lix.innerHTML = day;
-            ol1.appendChild(lix);
+        let text = "<h1>" + superheroes.members[0].name + "</h1>";
+        text += "<br>";
+        superheroes.members.forEach((x, y) => {
+            text += y + 1 + ".) " + x.name + ", " + x.age + "<ul>";
+            x.powers.forEach((x, y) => {
+                text += "<li>" + x + "</li>"
+            })
+            text += "</ul>"
         })
 
-        document.getElementById("body_container").appendChild(ol1);
-    </script>
-
-    <br>
-    <section>
-
-        <div id="div1">
-            <p id="p1">JavaScript</p>
-            <p id="p2">Python</p>
-            <p id="p3">TypeScript</p>
-            <!-- add a new element here -->
-        </div>
-        <hr>
-        <div id="div2">
-            <p>My favourite fruit.</p>
-        </div>
-
-
-        <button onclick="addNode()" type="button">Add Node</button>
-        <button onclick="deleteNode()" type="button">Delete Node</button>
-        <button onclick="addNewImage()" type="button">Add Image</button>
-
-        <script>
-            function addNode() {
-                // <p>a new paragraph</p>
-                let ptag = document.createElement("p");
-                // create text node
-                let txt = document.createTextNode("a new paragraph");
-                // append text node to a parent node
-                // select a parent node
-                let parent1 = document.getElementById("div1");
-                // append element node to a parent node
-
-                /*  uncomment in step 2 **/
-                let childP1 = document.getElementById("p1");
-                parent1.insertBefore(ptag, childP1);
-
-            }
-
-            function addNewImage() {
-                // <img src="apples.jpg">
-                let imgtag = document.createElement("img");
-
-                let srcAttr = document.createAttribute("src");
-                srcAttr.value = "apples.jpg";
-                let widthArr = document.createAttribute("width");
-                widthArr.value = "400";
-                imgtag.setAttributeNode(srcAttr);
-                imgtag.setAttributeNode(widthArr);
-                imgtag.style.borderRadius = "12px";
-                imgtag.style.margin = "6px";
-                // method 2
-                //imgtag.setAttribute('src', 'apples.jpg');
-
-                // add to <body>
-                document.getElementById("div2").appendChild(imgtag);
-            }
-
-            function deleteNode() {
-                let parent2 = document.getElementById("div1");
-                let delPtag = document.getElementById("p1");
-                parent2.removeChild(delPtag);
-            }
-        </script>
-    </section>
-</div>
-
-<div align="right" class="emailspin"><img alt="" border="0" src="/assets/emailspin.gif"><br>
-    65070089@kmitl.ac.th<br>
-    Any problem with the website, feel free to contact me.
-</div>
+        document.getElementById("out").innerHTML = text;
+    }
+</script>
 </body>
-
 </html>
-<script src="script.js"></script>
