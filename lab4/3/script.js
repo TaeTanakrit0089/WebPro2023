@@ -1,22 +1,29 @@
-let requestURL = 'questionAnswerData.json';
-let request = new XMLHttpRequest();
-request.onreadystatechange = function () {
-    if (request.readyState === 4 && request.status === 200) {
-        dataDisplay(JSON.parse(request.responseText));
-    }
-};
-request.open("GET", requestURL, true);
-request.send();
+function addTableRow() {
+    const idInput = document.getElementById("formStudentIDInput");
+    const firstNameInput = document.getElementById("formNameInput");
+    const lastNameInput = document.getElementById("formSurnameInput");
 
-function dataDisplay(data) {
-    let text = '';
-    text += data.squadName + '<br>';
-    text += data.homeTown + '<br>';
+    if (idInput.value.length !== 8)
+        return window.alert("Invalid Student ID!");
+    if (!firstNameInput.value.trim())
+        return window.alert("First Name is blank");
+    if (!lastNameInput.value.trim())
+        return window.alert("Last Name is blank");
 
-    for (...
-. )
-    {
+    const table = document.getElementById("table");
 
-    }
-    document.getElementById("out").innerHTML = text;
+    const rowCount = table.tBodies[0].rows.length;
+    const columnData = [rowCount + 1, idInput.value, firstNameInput.value, lastNameInput.value];
+
+    const tableRow = document.createElement("tr");
+    columnData.forEach((x) => {
+        const newColumn = document.createElement("td");
+        newColumn.innerText = x;
+        tableRow.appendChild(newColumn);
+    })
+    table.getElementsByTagName('tbody')[0].appendChild(tableRow);
+
+    idInput.value = "";
+    firstNameInput.value = "";
+    lastNameInput.value = "";
 }

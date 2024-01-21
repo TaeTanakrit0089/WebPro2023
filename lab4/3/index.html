@@ -19,7 +19,56 @@
     <div class="sook_south"></div>
 </nav>
 <div class="" id="body_container" style="margin-top: 31px">
+    <div class="form-container blur-effect" id="form" style="padding: 26px">
+        <h1 id="title">Students List</h1>
+        <div class="d-flex flex-row gap-5 mt-4">
+            <!--ID Input        -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="formStudentIDTitle">Student ID:</span>
+                </div>
+                <input class="form-control" id="formStudentIDInput"
+                       placeholder="Student ID"
+                       type="number">
+            </div>
+            <!--Name Input        -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="formNameTitle">First Name:</span>
+                </div>
+                <input class="form-control" id="formNameInput"
+                       placeholder="Tanakrit"
+                       type="text">
+            </div>
+            <!--Surname Input        -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="formSurnameTitle">Last Name:</span>
+                </div>
+                <input class="form-control" id="formSurnameInput"
+                       placeholder="Supprasit"
+                       type="text">
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <button class="btn btn-primary mt-1" id="submitBtn" onclick="addTableRow()">Add</button>
+        </div>
+    </div>
 
+    <div class="form-container blur-effect mt-3" style="padding: 26px">
+        <table class="table table-bordered" id="table">
+            <thead class="bg-light bg-gradient">
+            <tr>
+                <th>#</th>
+                <th>Student Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
 </div>
 
