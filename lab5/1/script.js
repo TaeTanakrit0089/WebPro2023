@@ -32,9 +32,15 @@ function convertCsvToJson(csv) {
 }
 
 function addElementstoResult(elements) {
-    for (let i = 0; i < elements.length; i++) {
-        const pTag = document.createElement('p');
-        pTag.innerHTML = `${elements[i].id}.) <b>${elements[i].firstName} ${elements[i].lastName}</b> (${elements[i].gender}) is a ${elements[i].position} at ${elements[i].address}`;
-        document.getElementById("result").appendChild(pTag);
-    }
+    let parent = document.getElementById("result");
+
+    let text = "<ol>"
+    elements.forEach((x, y) => {
+        text += "<li>" + "<b>" + x.firstName + " " + x.lastName + "</b>"
+            + " (" + x.gender + ") is a " + x.position + ", " + x.address
+
+            + "</li>"
+    })
+    text += "</ol>"
+    parent.innerHTML = text;
 }
