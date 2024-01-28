@@ -20,8 +20,16 @@ header ("Pragma: no-cache");
 <body>
 
 <nav class="topnav">
-    <div class="sook_north">
-        <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
+    <div class="sook_north d-flex justify-content-between">
+        <div class="d-flex flex-row">
+            <div class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#">HTML</a>
+            </div>
+        </div>
+        <div class="my-auto py-0 sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
     </div>
     <div class="sook_south"></div>
 </nav>
@@ -30,45 +38,102 @@ header ("Pragma: no-cache");
 <div class="body_container bg-transparent">
     <h1 class="feature_header text-primary pl-4 mb-5">HTML</h1>
     <div class="d-flex flex-row" id="html-info">
-        <div class="p-5 d-flex flex-row feature_rounded w-100 ">
-            <div class="d-flex flex-column" style="margin-right: 60px;">
-                <h2 class="" style="font-size: 42px; font-weight: 700">Hypertext Markup Language</h2>
-                <p class="mt-2">เป็นภาษาคอมพิวเตอร์ประเภทมาร์กอัปที่ใช้ในการสร้างเว็บเพจ
-                    โดยมาร์กอัปคือการแทรกข้อความหรือคำสั่งพิเศษเข้าไปในข้อความปกติเพื่อบอกให้เว็บเบราว์เซอร์แสดงผลข้อความนั้นออกมาในรูปแบบที่ต้องการ</p>
-                <p>
-                    HTML ประกอบด้วยแท็ก (tag)
-                    ซึ่งเป็นเครื่องหมายกำกับที่ใช้ในการกำหนดรูปแบบการแสดงผลของข้อความและองค์ประกอบต่างๆ บนเว็บเพจ เช่น
-                    หัวเรื่อง ย่อหน้า ลิงก์ รูปภาพ ตาราง ฯลฯ แท็ก HTML ประกอบด้วยชื่อแท็กและปิดแท็ก
-                    โดยชื่อแท็กจะบอกให้เว็บเบราว์เซอร์ทราบว่าแท็กนี้ทำหน้าที่อะไร
-                    ปิดแท็กจะบอกให้เว็บเบราว์เซอร์สิ้นสุดการแสดงผลคำสั่งในแท็กนั้น
-                </p>
-                <div class="d-flex flex-row gap-3 justify-content-between">
-                    <div class="d-flex flex-column html-small-box">
-                        <img alt="" src="assets/icon/learning.png">
-                        <h5>เรียนรู้ได้ง่าย</h5>
-                    </div>
-                    <div class="d-flex flex-column html-small-box">
-                        <img alt="" src="assets/icon/tips-and-tricks.png">
-                        <h5>มีประสิทธิภาพ</h5>
-                    </div>
-                    <div class="d-flex flex-column html-small-box">
-                        <img alt="" src="assets/icon/teaching.png">
-                        <h5>เข้าถึงได้ง่าย</h5>
-                    </div>
-                    <div class="d-flex flex-column html-small-box">
-                        <img alt="" src="assets/icon/microsoft-edge.webp">
-                        <h5>ทำงานได้บนทุกเบราว์เซอร์</h5>
+        <div class="d-flex flex-column feature_rounded w-100 p-5 gap-4">
+            <div class=" d-flex flex-row  ">
+                <div class="d-flex flex-column" style="margin-right: 60px;">
+                    <h2 class="" style="font-size: 42px; font-weight: 700">Hypertext Markup Language</h2>
+                    <p class="mt-2">เป็นภาษาคอมพิวเตอร์ประเภทมาร์กอัปที่ใช้ในการสร้างเว็บเพจ
+                        โดยมาร์กอัปคือการแทรกข้อความหรือคำสั่งพิเศษเข้าไปในข้อความปกติเพื่อบอกให้เว็บเบราว์เซอร์แสดงผลข้อความนั้นออกมาในรูปแบบที่ต้องการ</p>
+                    <p>
+                        HTML ประกอบด้วยแท็ก (tag)
+                        ซึ่งเป็นเครื่องหมายกำกับที่ใช้ในการกำหนดรูปแบบการแสดงผลของข้อความและองค์ประกอบต่างๆ บนเว็บเพจ
+                        เช่น
+                        หัวเรื่อง ย่อหน้า ลิงก์ รูปภาพ ตาราง ฯลฯ แท็ก HTML ประกอบด้วยชื่อแท็กและปิดแท็ก
+                        โดยชื่อแท็กจะบอกให้เว็บเบราว์เซอร์ทราบว่าแท็กนี้ทำหน้าที่อะไร
+                        ปิดแท็กจะบอกให้เว็บเบราว์เซอร์สิ้นสุดการแสดงผลคำสั่งในแท็กนั้น
+                    </p>
+                    <div class="d-flex flex-row gap-3 justify-content-between">
+                        <div class="d-flex flex-column html-small-box">
+                            <img alt="" src="assets/icon/learning.png">
+                            <h5>เรียนรู้ได้ง่าย</h5>
+                        </div>
+                        <div class="d-flex flex-column html-small-box">
+                            <img alt="" src="assets/icon/tips-and-tricks.png">
+                            <h5>มีประสิทธิภาพ</h5>
+                        </div>
+                        <div class="d-flex flex-column html-small-box">
+                            <img alt="" src="assets/icon/teaching.png">
+                            <h5>เข้าถึงได้ง่าย</h5>
+                        </div>
+                        <div class="d-flex flex-column html-small-box">
+                            <img alt="" src="assets/icon/microsoft-edge.webp">
+                            <h5>ทำงานได้บนทุกเบราว์เซอร์</h5>
+                        </div>
                     </div>
                 </div>
+                <img alt="" src="assets/html_logo.webp" style="max-width: 350px; max-height: 300px; margin: auto">
             </div>
-            <img alt="" src="assets/html_logo.webp" style="max-width: 350px; max-height: 300px; margin: auto">
+            <div class="">
+                <h3>HTML Terms</h3>
+                <ul>
+                    <li>Internet เครือข่ายคอมพิวเตอร์ที่ใหญ่ที่สุดในโลก เกิดจากการเชื่อมโยงของเครือข่ายต่างๆ เข้าด้วยกัน
+                    </li>
+                    <li>Hypertext รูปแบบเอกสารที่บรรจุการเชื่อมโยงไปยังเอกสารอื่นๆ ซึ่งสามารถใช้ข้อความ หรือรูป
+                        เป็นจุดเชื่อมโยง
+                    </li>
+                    <li>WWW ย่อจาก World Wide Web เป็นการสื่อสารด้วยการเชื่อมโยงเครือข่ายข่าวสารแบบใยแมงมุม(Web)
+                        แสดงผลด้วยเอกสารไฮเปอร์เท็กซ์
+                    </li>
+                    <li>HTTP ย่อมาจาก Hypertext Transfer Protocol
+                        เป็นรูปแบบการสื่อสารที่ใช้ในการรับส่งข้อมูลไฮเปอร์เท็กซ์ในเครือข่ายอินเทอร์เน็ต
+                    </li>
+                    <li>Web Browser โปรแกรมสำหรับแสดงผลหน้าเว็บ เช่น Internet Explorer, Mozilla Firefox และ Google
+                        Chrome เป็นต้น
+                    </li>
+                    <li>Web Page หน้าเอกสารที่อยู่ในรูปของไฮเปอร์เท็กซ์</li>
+                    <li>Web Site กลุ่มของหน้าเว็บหลายๆ หน้ารวมเข้าด้วยกัน</li>
+                    <li>Home Page หน้าเว็บ หน้าแรกของเว็บไซต์</li>
+                    <li>Web Site เครื่องให้บริการที่เป็นที่เก็บข้อมูลของ เว็บไซต์</li>
+                </ul>
+            </div>
+
+            <div>
+                <p>
+                    HTML เป็นภาษาคอมพิวเตอร์ที่มีบทบาทสำคัญในการสร้างเว็บไซต์ในยุคปัจจุบัน โครงสร้างของ HTML ประกอบด้วย
+                    Tag ต่างๆ ที่ใช้ในการกำหนดโครงสร้างและเนื้อหาของหน้าเว็บไซต์ โดย Web Browser จะแปลง Tag
+                    เหล่านี้เป็นหน้าตาของเว็บไซต์ที่เราเห็นบนหน้าจอ เช่น การกำหนดหัวเรื่องด้วย
+                    &lt;h1> หรือการแทรกรูปภาพด้วย &lt;img> ฯลฯ
+                </p>
+                <p>
+                    HTML มีความสามารถในการเชื่อมโยงข้อมูลระหว่างหน้าเว็บไซต์ต่างๆ
+                    ทำให้การเชื่อมโยงข้อมูลในอินเทอร์เน็ตเป็นไปอย่างสะดวกและรวดเร็ว นอกจากนี้ HTML
+                    ยังมีคุณสมบัติในการแก้ไขเนื้อหาของหน้าเว็บไซต์ที่มีอยู่แล้วได้โดยไม่ต้องใช้โปรแกรมเสริม
+                </p>
+                <p>
+                    การเรียนรู้ HTML มีความสำคัญเนื่องจากมันเป็นเครื่องมือสำคัญในการสร้างและแก้ไขเว็บไซต์
+                    แม้ว่าโปรแกรมประยุกต์สำหรับสร้างหน้าเว็บอาจมีมากมาย แต่การเรียนรู้ HTML
+                    ยังช่วยให้ผู้ใช้สามารถเข้าใจโครงสร้างพื้นฐานและปรับแต่งหน้าเว็บไซต์ตามต้องการได้โดยไม่ต้องพึ่งพาโปรแกรมเสริมหรือผู้อื่นในการทำเช่นนี้
+                </p>
+            </div>
         </div>
+
     </div>
 
     <!--    HTML History-->
     <div class="mt-4 d-flex flex-row justify-content-between">
         <div class="d-flex flex-column feature_rounded html-history">
-            <img alt="" src="assets/html_logo.webp" style="max-width: 350px; max-height: 300px; margin: auto">
+            <h2>โครงสร้างพื้นฐานของ HTML</h2>
+            <p>โครงสร้างของ HTML จะประกอบไปด้วยส่วนของคำสั่ง 2 ส่วน คือ ส่วนที่เป็น ส่วนหัว (Head) และส่วนที่เป็นเนื้อหา
+                (Body) โดยมีรูปแบบคำสั่งดังนี้</p>
+            <span style="color: rgb(178, 34, 34);">&lt;HTML&gt;<br>
+            &lt;HEAD&gt;<br>
+            &lt;TITLE&gt; ชื่อโปรแกรมหรือข้อมูลที่ต้องการแสดงในส่วนหัว &lt;/TITLE&gt;<br>
+            &lt;/HEAD&gt;<br>
+            &lt;BODY&gt;<br>
+            คำสั่งหรือข้อความที่ต้องการให้แสดง<br>
+            &lt;/BODY&gt;<br>
+            &lt;/HTML&gt;<span id="cke_bm_152E" style="display: none;">&nbsp;</span></span>
+
         </div>
         <div class="d-flex flex-column feature_rounded html-history">
             <img alt="" src="assets/html_logo.webp" style="max-width: 350px; max-height: 300px; margin: auto">
@@ -76,6 +141,18 @@ header ("Pragma: no-cache");
 
     </div>
 
+    <!--    Reference-->
+    <div class="d-flex flex-column mt-5">
+        <h1 class="text-center">Reference</h1>
+        <ul>
+            <li>
+                <a href="https://www.mindphp.com/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD/73-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3/2026-html-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3.html">mindphp.com - HTML</a>
+            </li>
+            <li>
+                <a href="http://www.krukikz.com/index.php?option=com_content&view=article&id=119&Itemid=152">โครงสร้าง HTML</a>
+            </li>
+        </ul>
+    </div>
 
 </div>
 

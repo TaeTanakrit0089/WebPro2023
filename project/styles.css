@@ -20,11 +20,11 @@
 
 .sook_south {
     background: orange;
-    height: 3px;
+    height: 5px;
 }
 
 .sook_text {
-    font-size: 85%;
+    font-size: 100%;
     font-weight: 600;
     padding: 5px;
     text-align: right;
@@ -52,6 +52,10 @@
 }
 
 html {
+}
+
+nav a{
+    color: white !important;
 }
 
 body {
