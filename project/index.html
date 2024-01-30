@@ -382,19 +382,150 @@ body { background-color: #d8da3d }
         </p>
 
     </div>
+
     <div class="mt-4 d-flex flex-row justify-content-between">
         <div class="d-flex flex-column feature_rounded w-50">
             <h3 class="mb-3">การใส่สไตล์ให้กับลิงค์</h3>
             <p>
-                navigation เมนูนั้นยังดูหน้าตาเหมือนรายการมากกว่าเมนู ดังนั้นเราจะใส่สไตล์เพิ่มเข้าไป
+                Navigation เมนูนั้นยังดูหน้าตาเหมือนรายการมากกว่าเมนู ดังนั้นเราจะใส่สไตล์เพิ่มเข้าไป
                 เราจะเอาจุด(bullet)ที่ใช้แสดงรายการออกไปก่อน
                 และย้ายรายการแต่ละรายการออกไปทางด้านซ้ายในตำแหน่งเดิมที่ใช้แสดงจุดในแต่ละรายการ
                 นอกจากนั้นเราก็จะใส่พื้นหลังสีขาวและสี่เหลี่ยมสีดำให้แต่ละรายการ (ทำไมน่ะหรือ
                 ไม่มีเหตุผลเฉพาะหรอกเพียงแต่ว่าเราสามารถทำได้)
             </p>
 
+            <p>
+                นอกจากนี้เรายังไม่ได้ระบุวว่าสีที่ใช้ลิงค์เป็นสีอะไร
+                ดังนั้นให้เพิ่มลงไปด้วยสีฟ้าใช้สำหรับลิงค์ที่ผู้อ่านยังมองไม่เห็นส่วนสีม่วงใช้สำหรับลิงค์
+                ที่ผู้อ่านคลิกเข้าไปดูแล้ว
+            </p>
+            <pre class="text-code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My first styled page&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  body {
+    padding-left: 11em;
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d }
+  ul.navbar {
+    <strong>list-style-type: none;
+    padding: 0;
+    margin: 0;</strong>
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  <strong>ul.navbar li {
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black }
+  ul.navbar a {
+    text-decoration: none }
+  a:link {
+    color: blue }
+  a:visited {
+    color: purple }</strong>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+[etc.]
+</pre>
+            <p>
+                โดยทั่วไปแล้ว บราวเซอร์จะแสดงลิงค์ด้วยการขีดเส้นใต้และใส่สี
+                โดยปกติสีที่ใช้จะเหมือนกับสีที่ระบุไว้ในที่นี้ คือ
+                สีฟ้าไว้สำหรับลิงค์ไปยังหน้าที่คุณยังไม่ได้เข้าไปดู
+                (หรือที่เคยเข้าไปดูเมื่อนานมาแล้ว)
+                สีม่วงไว้ใช้สำหรับหน้าที่เข้าไปดูมาแล้ว
+
+            </p>
+            <p>
+                ใน HTML การสร้างลิงค์ทำได้โดยใช้ element &lt;a&gt;
+                ดังนั้นเวลาที่เรระบุสีเราจะต้องใส่สไตล์ให้กับ “a”
+                เพื่อแยกความแตกต่างระหว่างลิงค์ที่เยี่ยม
+                ชมแล้วกับลิงค์ที่ยังไม่ได้เยี่ยมชม CSS ได้กำหนดให้มี
+                “pseudo-classes” (:link และ :visited) ที่เรียกว่า “pseudo-classes”
+                เพื่อแยกแยะความแตกต่างระหว่าง class<em>attributes,</em>
+                ที่แสดงบน HTML โดยตรงตัวอย่างเช่น <code>class="navbar"</code>
+                ที่แสดงไว้ในตัวอย่างข้างต้น
+            </p>
+        </div>
+        <div class="d-flex flex-column feature_rounded w-50">
+            <h3 class="mb-3">การเพิ่มเส้นแบ่งในแนวนอน</h3>
+            <p>
+                ส่วนที่เราจะเพิ่มเป็นส่วนสุดท้ายใน style sheet
+                คือการใส่เส้นแบ่งในแนวนอนเพื่อแยกข้อความออกจากส่วนของลายเซ็นต์ในส่วนท้าย เราจะใช้'border-top'
+                เพื่อเพิ่มเส้นแบ่งแบบจุดในส่วนบนของ element &lt;address>
+            </p>
+            <pre class="text-code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My first styled page&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  body {
+    padding-left: 11em;
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d }
+  ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  ul.navbar li {
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black }
+  ul.navbar a {
+    text-decoration: none }
+  a:link {
+    color: blue }
+  a:visited {
+    color: purple }
+  <strong>address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted }</strong>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+[etc.]
+</pre>
+            <p>
+                ตอนนี้การใส่สไตล์ของเราก็เสร็จสมบูรณ์ต่อไปเราจะมาดูว่าเราจะแยก style sheet
+                ไว้อีกไฟล์ได้อย่างไรเพื่อที่ว่าหน้าอื่นสามารถใช้สไตล์ร่วมกันได้
+            </p>
         </div>
     </div>
+
+    <div class="mt-4 d-flex flex-row justify-content-between">
+        <div class="d-flex flex-column feature_rounded w-50">
+            <h3 class="mb-3">การใส่ STYLE SHEET แยกไฟล์</h3>
+
+        </div>
+        <div class="d-flex flex-column feature_rounded w-50">
+            <h3 class="mb-3">การเพิ่ม NAVIGATION BAR</h3>
+
+        </div>
+    </div>
+
+
 </div>
 
 <div class="body_container bg-transparent" id="JavaScript">
@@ -410,15 +541,22 @@ body { background-color: #d8da3d }
                     - HTML</a>
             </li>
             <li>
-                <a href="http://www.krukikz.com/index.php?option=com_content&view=article&id=119&Itemid=152">โครงสร้าง
+                <a href="http://www.krukikz.com/index.php?option=com_content&view=article&id=119&Itemid=152">
+                    โครงสร้าง
                     HTML</a>
             </li>
             <li>
                 <a href="https://blog.sogoodweb.com/Article/Detail/79237/CSS-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B8%A1%E0%B8%B5%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%A2%E0%B8%8A%E0%B8%99%E0%B9%8C-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3">CSS</a>
             </li>
             <li>
-                <a href="https://seo-winner.com/What-is-CSS-and-how-does-it-benefit-us">CSS คืออะไร
+                <a href="https://seo-winner.com/What-is-CSS-and-how-does-it-benefit-us">
+                    CSS คืออะไร
                     มีประโยชน์อย่างไรกับเราบ้าง</a>
+            </li>
+            <li>
+                <a href="https://www.w3.org/Style/Examples/011/firstcss.th.html">
+                    เริ่มต้นด้วย HTML + CSS
+                </a>
             </li>
         </ul>
     </div>
