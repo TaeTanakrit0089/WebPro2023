@@ -517,11 +517,110 @@ body { background-color: #d8da3d }
     <div class="mt-4 d-flex flex-row justify-content-between">
         <div class="d-flex flex-column feature_rounded w-50">
             <h3 class="mb-3">การใส่ STYLE SHEET แยกไฟล์</h3>
+            <p>
+                ตอนนี้เรามีไฟล์ HTML ที่มี style sheet ฝังอยู่แต่หาก เวบไซด์ของเรามีเนื้อหาเพิ่มมากขึ้นเราอาจจะต้องการให้หน้าแต่ละหน้าสามารถใช้สไตล์ร่วม กันได้ ซึ่งมีวิธีที่ดีกว่าการก๊อปปี้ style sheet ลงไปในทุกๆหน้า นั่นก็คือหากเราใส่ style sheet แยกไฟล์ไว้ทุกๆหน้าเวบก็สามารถเรียกสไตล์มาใช้ได้โดยตรง
+            </p>
+            <p>
+                ในการสร้างไฟล์สำหรับ style sheet เราต้องสร้างไฟล์ text เปล่าขึ้นมาอีกหนึ่งไฟล์ คุณสามารถทำได้โดยเลือก “New” จากเมนู File ในโปรแกรมแก้ไขเพื่อสร้างหน้าเปล่าขึ้นมาหนึ่งหน้า (ถ้าคุณใช้โปรแกรม TextEdit อย่าลืมว่าต้องแก้ไขให้เป็นข้อความธรรมดาก่อนโดยเลือกได้จากเมนู Format)
+            </p>
+            <p>
+                หลังจากนั้นให้ตัดและวางทุกส่วนที่อยู่ใน element &lt;style> จากไฟล์ HTML ลงไปยังหน้าใหม่แต่อย่าก๊อปปี้ตัว element &lt;style> และ &lt;/style> เอง เพราะเป็นส่วนที่ใช้กับ HTML ไม่ใช่ CSS ในหน้าใหม่ของโปรแกรมแก้ไข ควรจะมี style sheet ที่ครบสมบูรณ์ดังนี้
+            </p>
+            <pre class="text-code">body {
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: purple;
+  background-color: #d8da3d }
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 9em }
+...
+</pre>
+            <p>
+                ให้เลือก “Save As…” จากเมนู File ต้องแน่ใจว่าได้เซฟไว้อยู่ในส่วนหรือแฟ้มเดียวกันกับไฟล์ mypage.html และให้เซฟ style sheet เป็น “mystyle.css”
+            </p>
+            <p>
+                ตอนนี้ให้กลับไปยังหน้าที่มีโคด HTML ให้เอาทุกอย่างออกเริ่มตั้งแต่ tag <style> จนถึง tag </style> และแทนที่ด้วย element <link> ดังนี้
+            </p>
+            <pre class="text-code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My first styled page&lt;/title&gt;
+  <strong>&lt;link rel="stylesheet" href="mystyle.css"&gt;</strong>
+&lt;/head&gt;
 
+&lt;body&gt;
+[etc.]
+</pre>
+            <p>
+                ส่วนนี้จะเป็นส่วนที่บอกบราวเซอร์ว่า style sheet จะอยู่ในไฟล์ที่ชื่อว่า “mystyle.css” และเนื่องจากไม่ได้มีการบอกถึงส่วนที่เก็บไฟล์ บราวเซอร์จะดูจากส่วน ที่เก็บไฟล์เดียวกันกับไฟล์ HTML
+            </p>
+            <p>
+                หากคุณเซฟไฟล์ HTML และโหลดใหม่ในบราวเซอร์ คุณอาจจะมองไม่เห็นถึงความแตกต่างเพราะหน้าเวบยังคงมีสไตล์เดิมแต่ตอนนี้สไตล์จะมาก จากไฟล์ที่อยู่ข้างนอก
+            </p>
+            <p>
+                ขั้นตอนต่อไปก็คือการวางทั้งไฟล์ mypage.html และ mystyle.css บนเวบไซด์ของคุณ (ซึ่งคุณอาจจะต้องการแก้ไขก่อนเล็กน้อย) แต่ส่วนวิธีการวางอย่าง ไรนั้นขึ้นอยู่กับผู้ให้บริการอินเตอร์เน็ทของคุณ
+            </p>
         </div>
         <div class="d-flex flex-column feature_rounded w-50">
             <h3 class="mb-3">การเพิ่ม NAVIGATION BAR</h3>
+            <p>
+                รายชื่อในส่วนบนของหน้า HTML ตั้งใจจะใช้เป็นเมนู navigation
+                เวบไซด์หลายเวบมีการใช้เมนูวางเรียงไว้ด้านบนหรือไว้ด้านข้างของ
+                หน้าและหน้านี้ก็ควรมีเช่นกันซึ่งเราจะวางไว้ด้านซ้ายเนื่องจากดูแล้วน่าแล้วน่าสนใจกว่าวางไว้ด้านบน
+            </p>
+            <p>
+                เมนูดังกล่าวนี้มีอยู่ในหน้า HTML แล้วโดยใช้
+                &lt;ul>แสดงรายการไว้ด้านบนลิงค์ยังไม่สามารถใช้ได้เนื่องเวบไซด์ของเราในขณะนี้มี
+                เพียงหน้าเดียวแต่ในขณะนี้เรื่องนั้นไม่สำคัญ
+                แต่แน่นอนว่าสำหรับเวบไซด์จริงๆแล้วไม่ควรจะมีลิงค์ที่ใช้งานไม่ได้
+            </p>
+            <p>
+                ดังนั้นเราจะต้องย้ายรายชื่อลงมาอยู่ด้านซ้ายและย้ายข้อความที่เหลือทั้งหมดมาทางด้านขวาเล็กน้อยเพื่อให้มีพื้นที่
+                CSS property ที่เราใช้คือ 'padding-left' (สำหรับย้ายข้อความในส่วน body) และ 'position' 'left' และ
+                'top' (เพื่อย้ายเมนู)
+            </p>
+            <p>
+                ยังมีวิธีอื่นๆที่สามารถทำได้หากคุณดูในส่วน “column” หรือ “layout” ในหน้า Learning CSS (เรียนรู้
+                CSS)คุณจะเจอเทมเพลตที่ใช้ได้เลยหลายอันแต่ อันนี้ก็ใช้ได้เหมาะสมกับจุดประสงค์ของเรา
+            </p>
+            <p>
+                ในหน้าโปรแกรมแก้ไข ให้เพิ่มบรรทัดต่อไปนี้เขาไปในไฟล์ HTML
+            </p>
+            <pre class="text-code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My first styled page&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  body {
+    <strong>padding-left: 11em;</strong>
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d }
+  <strong>ul.navbar {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }</strong>
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  &lt;/style&gt;
+&lt;/head&gt;
 
+&lt;body&gt;
+[etc.]
+</pre>
+            <p>
+                หากคุณเซฟไฟล์อีกครั้งและ reload ในบราวเซอร์ทีนี้คุณก็จะได้รายชื่อลิงค์ที่อยู่ทางด้านซ้ายของข้อความหลัก ซึ่งตอนนี้หน้าเวบนี้ก็ดูน่าสนใจขึ้น
+            </p>
         </div>
     </div>
 
