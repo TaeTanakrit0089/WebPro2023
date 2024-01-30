@@ -26,7 +26,13 @@ header ("Pragma: no-cache");
                 <a class="nav-link text-white" href="#">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link text-white" href="#">HTML</a>
+                <a class="nav-link text-white" href="#HTML">HTML</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link text-white" href="#CSS">CSS</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link text-white" href="#JavaScript">JavaScript</a>
             </div>
         </div>
         <div class="my-auto py-0 sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
@@ -35,8 +41,9 @@ header ("Pragma: no-cache");
 </nav>
 <div class="parallax">
 </div>
-<div class="body_container bg-transparent">
-    <h1 class="feature_header text-primary pl-4 mb-5">HTML</h1>
+
+<div class="body_container bg-transparent" id="HTML">
+    <h1 class="feature_header text-primary pl-4 mb-3">HTML</h1>
     <div class="d-flex flex-row" id="html-info">
         <div class="d-flex flex-column feature_rounded w-100 p-5 gap-4">
             <div class=" d-flex flex-row  ">
@@ -207,8 +214,105 @@ header ("Pragma: no-cache");
         </div>
 
     </div>
+</div>
 
-    <!--    Reference-->
+
+<div class="body_container bg-transparent" id="CSS">
+    <h1 class="feature_header text-primary pl-4 mb-3">CSS</h1>
+    <div class="d-flex flex-row" id="css-info">
+        <div class="d-flex flex-column feature_rounded w-100 p-5 gap-4">
+            <div class=" d-flex flex-row  ">
+                <div class="d-flex flex-column" style="margin-right: 60px;">
+                    <h2 class="" style="font-size: 42px; font-weight: 700">Cascading Style Sheets</h2>
+                    <p class="mt-2">CSS คือ ภาษาที่ใช้สำหรับตกแต่งเอกสาร HTML/XHTML ให้มีหน้าตา สีสัน ระยะห่าง พื้นหลัง
+                        เส้นขอบและอื่นๆ ตามที่ต้องการ CSS ย่อมาจาก Cascading Style Sheets
+                        มีลักษณะเป็นภาษาที่มีรูปแบบในการเขียน Syntax แบบเฉพาะและได้ถูกกำหนดมาตรฐานโดย W3C
+                        เป็นภาษาหนึ่งในการตกแต่งเว็บไซต์ ได้รับความนิยมอย่างแพร่หลาย</p>
+                    <p>
+                        การกำหนดรูปแบบ หรือ Style นี้ ใช้หลักการของการแยกเนื้อหาเอกสาร HTML
+                        ออกคำสั่งที่ใช้ในการจัดรูปแบบการแสดงผล กำหนดให้รูปแบบของการแสดงผลเอกสาร
+                        ไม่ขึ้นอยู่กับเนื้อหาของเอกสาร เพื่อให้ง่ายต่อการจัดรูปแบบการแสดงผลลัพธ์ของเอกสาร HTML
+                    </p>
+                    <p>ในกรณีที่มีการเปลี่ยนแปลงเนื้อหาเอกสารบ่อยครั้ง หรือต้องการให้ควบคุมให้รูปแบบการแสดงผลเอกสาร HTML
+                        มีลักษณะของความสม่ำเสมอทั่วกันทุกหน้าเอกสารภายในเว็บไซต์เดียวกัน โดยกฎเกณฑ์ในการกำหนดรูปแบบ
+                        (Style) เอกสาร HTML ถูกเพิ่มเข้ามาครั้งแรกใน HTML 4.0 เมื่อปีพ.ศ. 2539 ในรูปแบบของ CSS level 1
+                        Recommendations ที่กำหนดโดย องค์กร World Wide Web Consortium หรือ W3C
+                    </p>
+
+                </div>
+                <img alt="" src="assets/css_logo.webp" style="max-width: 350px; max-height: 300px; margin: auto">
+            </div>
+            <div class="">
+                <h3>ประโยชน์ของ CSS</h3>
+                <p class="mt-3 mb-1"><strong>CSS</strong> มีประโยชน์อย่างหลากหลาย ซึ่งได้แก่</p>
+                <ol class="mt-0">
+                    <li>
+                        ช่วยให้เนื้อหาภายในเอกสาร HTML
+                        มีความเข้าใจได้ง่ายขึ้นและในการแก้ไขเอกสารก็สามารถทำได้ง่ายกว่าเดิม เพราะการใช้ CSS
+                        จะช่วยลดการใช้ภาษา HTML ลงได้ในระดับหนึ่ง และแยกระหว่างเนื้อหากับรูปแบบในการแสดงผลได้อย่างชัดเจน
+                    </li>
+                    <li>
+                        ทำให้สามารถดาวน์โหลดไฟล์ได้เร็ว เนื่องจาก code ในเอกสาร HTML ลดลง จึงทำให้ไฟล์มีขนาดเล็กลง
+                    </li>
+                    <li>
+                        สามารถกำหนดรูปแบบการแสดผลจากคำสั่ง style sheet ชุดเดียวกัน
+                        ให้มีการแสดงผลในเอกสารแบบเดียวทั้งหน้าหรือในทุกๆ หน้าได้
+                        ช่วยลดเวลาในการปรับปรุงและทำให้การสร้างเอกสารบนเว็บมีความรวดเร็วยิ่งขึ้น
+                        นอกจากนี้ยังสามารถควบคุมการแสดงผล ให้คล้ายหรือเหมือนกันได้ในหลาย Web Browser
+                    </li>
+                    <li>
+                        ช่วยในการกำหนดการแสดงผลในรูปแบบที่มีความเหมาะกับสื่อต่างๆ ได้เป็นอย่างดี
+                    </li>
+                    <li>
+                        ทำให้เว็บไซต์มีความเป็นมาตรฐานมากขึ้นและมีความทันสมัย สามารถรองรับการใช้งานในอนาคตได้ดี
+                    </li>
+                    <li>
+                        ภาษา CSS ช่วยในการจัดรูปแบบ HTML ซึ่งจะช่วยลดการใช้ภาษา HTML ให้น้อยลง
+                        โดยเหลือเพียงแค่ส่วนที่เป็นเอกสาร ที่เป็นภาษา HTML
+                        เท่านั้นทำให้มีการแก้ไขและทำความเข้าใจได้ง่ายขึ้น
+                    </li>
+                    <li>
+                        ทำให้ขนาดไฟล์ HTML น้อยลงเนื่องจาก ภาษา CSS จะช่วยลงการใช้ภาษา HTML
+                        ลงทำให้ขนาดไฟล์นั้นก็เล็กลงไปด้วยเช่นกัน
+                    </li>
+                    <li>
+                        ภาษา CSS เป็นภาษา Style Sheets โดย Style Sheets ชุดเดียวสามารถใช้กำหนดรูปแบบการแสดงผลให้เอกสาร
+                        HTML ทั้งหน้า หรือทุกหน้ามีผลเหมือนกันได้
+                        จึงทำให้เวลาที่มีการแก้ไขก็จะแก้ไขได้ง่ายขึ้นเพียงแก้ไข Style Sheets
+                        ที่ใช้งานเพียงชุดเดียวเท่านั้น
+                    </li>
+                    <li>
+                        ทำให้เว็บไซต์มีมาตรฐานเพราะการใช้งาน CSS นั้นจะทำให้การแสดงผลในสื่อต่างๆ
+                        ถูกปรับเปลี่ยนไปได้อย่างเหมาะสม เช่น การแสดงผลบนหน้าจอ และการแสดงผลในมือถือนั่นเองล่ะ
+                    </li>
+                    <li>
+                        CSS สามารถที่จะใช้งานได้หลากหลาย เว็บเบราว์เซอร์ ทำให้การใช้งานนั้นสะดวกมากยิ่งขึ้น
+                    </li>
+                    <li>
+                        CSS สามารถกำหนดแยกไว้ต่างหากจากไฟล์เอกสาร HTML และสามารถนำมาใช้ร่วม กับเอกสารหลายไฟล์ได้
+                        การแก้ไขก็แก้เพียง จุดเดียวก็มีผลกับเอกสารทั้งหมดแล้ว
+                    </li>
+                </ol>
+                <p>
+                    CSS กับ HTML นั้นทำหน้าที่คนละอย่างกัน โดย HTMLจะทำหน้าที่ในการวางโครงร่างเอกสารอย่างเป็นรูปแบบ
+                    ถูกต้อง เข้าใจง่าย ไม่เกี่ยวข้องกับการแสดงผล ส่วน CSS จะทำหน้าที่ในการตกแต่งเอกสารให้สวยงาม
+                    เรียกได้ว่า HTML คือส่วน coding ส่วน CSS คือส่วน design
+                </p>
+                <p>
+                    CSS กับ HTML / นั้นทำหน้าที่คนละอย่างกัน โดย HTML / XHTML
+                    จะทำหน้าที่ในการวางโครงร่างเอกสารอย่างเป็นรูปแบบ ถูกต้อง เข้าใจง่าย ไม่เกี่ยวข้องกับการแสดงผล ส่วน
+                    CSS จะทำหน้าที่ในการตกแต่งเอกสารให้สวยงาม เรียกได้ว่า HTML /XHTML คือส่วน coding ส่วน CSS คือส่วน
+                    design
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body_container bg-transparent" id="JavaScript">
+</div>
+
+<div class="body_container bg-transparent" id="Reference">
     <div class="d-flex flex-column mt-5">
         <h1 class="text-center">Reference</h1>
         <ul>
@@ -220,10 +324,19 @@ header ("Pragma: no-cache");
                 <a href="http://www.krukikz.com/index.php?option=com_content&view=article&id=119&Itemid=152">โครงสร้าง
                     HTML</a>
             </li>
+            <li>
+                <a href="https://blog.sogoodweb.com/Article/Detail/79237/CSS-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B8%A1%E0%B8%B5%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%A2%E0%B8%8A%E0%B8%99%E0%B9%8C-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3">CSS</a>
+            </li>
+            <li>
+                <a href="https://seo-winner.com/What-is-CSS-and-how-does-it-benefit-us">CSS คืออะไร
+                    มีประโยชน์อย่างไรกับเราบ้าง</a>
+            </li>
         </ul>
     </div>
-
 </div>
+
+<!--    Reference-->
+
 
 <div align="right" class="emailspin"><img border="0" src="assets/emailspin.gif"><br>
     65070089@kmitl.ac.th<br>
