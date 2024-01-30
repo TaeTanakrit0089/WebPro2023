@@ -2,197 +2,207 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="#2242A6" name="theme-color">
-    <title>65070089 - Fundamental Web Programming Lab.</title>
-    <link href="styles.css?v=1.0" rel="stylesheet">
-    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <meta charset="UTF-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <meta content="#2242A6" name="theme-color">
+ <title>65070089 - Fundamental Web Programming Lab.</title>
+ <link href="styles.css?v=1.0" rel="stylesheet">
+ <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
 <nav class="topnav">
-    <div class="sook_north">
-        <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
-    </div>
-    <div class="sook_south"></div>
+ <div class="sook_north">
+  <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
+ </div>
+ <div class="sook_south"></div>
 </nav>
 <div class="body_container" style="margin-top: 31px">
-    <div class="form-container blur-effect">
-        <h1 class="my-2 text-center">ข้อมูลส่วนบุคคล</h1>
-        <form class="mt-4 gap-2 d-flex flex-column" id="myForm">
-            <div class="form-group">
-                <label for="idCard">หมายเลขบัตรประชาชน:</label>
-                <input class="form-control" id="idCard" placeholder="กรอกหมายเลขบัตรประชาชน 13 หลัก" type="text">
-                <div class="invalid-feedback" id="idCardError"></div>
-            </div>
+ <div class="form-container blur-effect">
+  <h1 class="my-2 text-center">ข้อมูลส่วนบุคคล</h1>
+  <form class="mt-4 gap-2 d-flex flex-column" id="myForm">
+   <div class="form-group">
+    <label for="idCard">หมายเลขบัตรประชาชน:</label>
+    <input class="form-control" id="idCard" placeholder="กรอกหมายเลขบัตรประชาชน 13 หลัก" type="text">
+    <div class="invalid-feedback" id="idCardError"></div>
+   </div>
 
-            <div class="d-flex flex-row justify-content-between">
-                <div class="form-group">
-                    <label for="prefix">คำนำหน้านาม:</label>
-                    <select class="form-control" id="prefix">
-                        <option value="">เลือกคำนำหน้านาม</option>
-                        <option value="นาย">นาย</option>
-                        <option value="นาง">นาง</option>
-                        <option value="นางสาว">นางสาว</option>
-                        <option value="เด็กชาย">เด็กชาย</option>
-                        <option value="เด็กหญิง">เด็กหญิง</option>
-                    </select>
-                    <div class="invalid-feedback" id="prefixCardError"></div>
-                </div>
-                <div class="form-group" style="width:40%">
-                    <label for="firstName">ชื่อ:</label>
-                    <input class="form-control" id="firstName" placeholder="กรอกชื่อ ความยาวระหว่าง 2-20 ตัวอักษร"
-                           type="text">
-                    <div class="invalid-feedback" id="firstNameError"></div>
-                </div>
-                <div class="form-group" style="width:40%">
-                    <label for="lastName">นามสกุล:</label>
-                    <input class="form-control" id="lastName" placeholder="กรอกนามสกุล ความยาวระหว่าง 2-30 ตัวอักษร"
-                           type="text">
-                    <div class="invalid-feedback" id="lastNameError"></div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="address">ที่อยู่:</label>
-                <textarea class="form-control" id="address" placeholder="กรอกที่อยู่ ความยาวไม่ต่ำกว่า 15 ตัวอักษร"
-                          rows="3"></textarea>
-                <div class="invalid-feedback" id="addressError"></div>
-            </div>
-
-            <div class="d-flex flex-row justify-content-between gap-3">
-                <div class="form-group w-50">
-                    <label for="subdistrict">ตำบล/แขวง:</label>
-                    <input class="form-control" id="subdistrict"
-                           placeholder="กรอกตำบล/แขวง ความยาวไม่ต่ำกว่า 2 ตัวอักษร"
-                           type="text">
-                    <div class="invalid-feedback" id="subdistrictError"></div>
-                </div>
-                <div class="form-group w-50">
-                    <label for="district">อำเภอ/เขต:</label>
-                    <input class="form-control" id="district" placeholder="กรอกอำเภอ/เขต ความยาวไม่ต่ำกว่า 2 ตัวอักษร"
-                           type="text">
-                    <div class="invalid-feedback" id="districtError"></div>
-                </div>
-            </div>
-
-            <div class="d-flex flex-row justify-content-between gap-3">
-                <div class="form-group w-50">
-                    <label>จังหวัด:</label>
-                    <select class="form-control" id="province" name="province">
-                        <option selected value="">--------- เลือกจังหวัด ---------</option>
-                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                        <option value="กระบี่">กระบี่</option>
-                        <option value="กาญจนบุรี">กาญจนบุรี</option>
-                        <option value="กาฬสินธุ์">กาฬสินธุ์</option>
-                        <option value="กำแพงเพชร">กำแพงเพชร</option>
-                        <option value="ขอนแก่น">ขอนแก่น</option>
-                        <option value="จันทบุรี">จันทบุรี</option>
-                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
-                        <option value="ชัยนาท">ชัยนาท</option>
-                        <option value="ชัยภูมิ">ชัยภูมิ</option>
-                        <option value="ชุมพร">ชุมพร</option>
-                        <option value="ชลบุรี">ชลบุรี</option>
-                        <option value="เชียงใหม่">เชียงใหม่</option>
-                        <option value="เชียงราย">เชียงราย</option>
-                        <option value="ตรัง">ตรัง</option>
-                        <option value="ตราด">ตราด</option>
-                        <option value="ตาก">ตาก</option>
-                        <option value="นครนายก">นครนายก</option>
-                        <option value="นครปฐม">นครปฐม</option>
-                        <option value="นครพนม">นครพนม</option>
-                        <option value="นครราชสีมา">นครราชสีมา</option>
-                        <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
-                        <option value="นครสวรรค์">นครสวรรค์</option>
-                        <option value="นราธิวาส">นราธิวาส</option>
-                        <option value="น่าน">น่าน</option>
-                        <option value="นนทบุรี">นนทบุรี</option>
-                        <option value="บึงกาฬ">บึงกาฬ</option>
-                        <option value="บุรีรัมย์">บุรีรัมย์</option>
-                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
-                        <option value="ปทุมธานี">ปทุมธานี</option>
-                        <option value="ปราจีนบุรี">ปราจีนบุรี</option>
-                        <option value="ปัตตานี">ปัตตานี</option>
-                        <option value="พะเยา">พะเยา</option>
-                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
-                        <option value="พังงา">พังงา</option>
-                        <option value="พิจิตร">พิจิตร</option>
-                        <option value="พิษณุโลก">พิษณุโลก</option>
-                        <option value="เพชรบุรี">เพชรบุรี</option>
-                        <option value="เพชรบูรณ์">เพชรบูรณ์</option>
-                        <option value="แพร่">แพร่</option>
-                        <option value="พัทลุง">พัทลุง</option>
-                        <option value="ภูเก็ต">ภูเก็ต</option>
-                        <option value="มหาสารคาม">มหาสารคาม</option>
-                        <option value="มุกดาหาร">มุกดาหาร</option>
-                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
-                        <option value="ยโสธร">ยโสธร</option>
-                        <option value="ยะลา">ยะลา</option>
-                        <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
-                        <option value="ระนอง">ระนอง</option>
-                        <option value="ระยอง">ระยอง</option>
-                        <option value="ราชบุรี">ราชบุรี</option>
-                        <option value="ลพบุรี">ลพบุรี</option>
-                        <option value="ลำปาง">ลำปาง</option>
-                        <option value="ลำพูน">ลำพูน</option>
-                        <option value="เลย">เลย</option>
-                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-                        <option value="สกลนคร">สกลนคร</option>
-                        <option value="สงขลา">สงขลา</option>
-                        <option value="สมุทรสาคร">สมุทรสาคร</option>
-                        <option value="สมุทรปราการ">สมุทรปราการ</option>
-                        <option value="สมุทรสงคราม">สมุทรสงคราม</option>
-                        <option value="สระแก้ว">สระแก้ว</option>
-                        <option value="สระบุรี">สระบุรี</option>
-                        <option value="สิงห์บุรี">สิงห์บุรี</option>
-                        <option value="สุโขทัย">สุโขทัย</option>
-                        <option value="สุพรรณบุรี">สุพรรณบุรี</option>
-                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
-                        <option value="สุรินทร์">สุรินทร์</option>
-                        <option value="สตูล">สตูล</option>
-                        <option value="หนองคาย">หนองคาย</option>
-                        <option value="หนองบัวลำภู">หนองบัวลำภู</option>
-                        <option value="อำนาจเจริญ">อำนาจเจริญ</option>
-                        <option value="อุดรธานี">อุดรธานี</option>
-                        <option value="อุตรดิตถ์">อุตรดิตถ์</option>
-                        <option value="อุทัยธานี">อุทัยธานี</option>
-                        <option value="อุบลราชธานี">อุบลราชธานี</option>
-                        <option value="อ่างทอง">อ่างทอง</option>
-                    </select>
-                    <div class="invalid-feedback" id="provinceError"></div>
-                </div>
-                <div class="form-group w-50">
-                    <label for="zipcode">รหัสไปรษณีย์:</label>
-                    <input class="form-control" id="zipcode" placeholder="กรอกรหัสไปรษณีย์" type="text">
-                    <div class="invalid-feedback" id="zipcodeError"></div>
-                </div>
-            </div>
-            <button class="btn btn-primary mt-3" onclick="submitForm()" type="button">Submit</button>
-        </form>
+   <div class="d-flex flex-row justify-content-between">
+    <div class="form-group">
+     <label for="prefix">คำนำหน้านาม:</label>
+     <select class="form-control" id="prefix">
+      <option value="">เลือกคำนำหน้านาม</option>
+      <option value="นาย">นาย</option>
+      <option value="นาง">นาง</option>
+      <option value="นางสาว">นางสาว</option>
+      <option value="เด็กชาย">เด็กชาย</option>
+      <option value="เด็กหญิง">เด็กหญิง</option>
+     </select>
+     <div class="invalid-feedback" id="prefixCardError"></div>
     </div>
-    <div class="mt-4 form-container blur-effect">
-        <table class="table table-bordered" id="table">
-            <thead class="bg-light bg-gradient">
-            <tr>
-                <th>ลำดับที่</th>
-                <th>รหัสบัตรประชาชน</th>
-                <th>ชื่อจริงและนามสกุล</th>
-                <th>ที่อยู่</th>
-                <th>Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div class="form-group" style="width:40%">
+     <label for="firstName">ชื่อ:</label>
+     <input
+             class="form-control" id="firstName" placeholder="กรอกชื่อ ความยาวระหว่าง 2-20 ตัวอักษร"
+             type="text"
+     >
+     <div class="invalid-feedback" id="firstNameError"></div>
     </div>
+    <div class="form-group" style="width:40%">
+     <label for="lastName">นามสกุล:</label>
+     <input
+             class="form-control" id="lastName" placeholder="กรอกนามสกุล ความยาวระหว่าง 2-30 ตัวอักษร"
+             type="text"
+     >
+     <div class="invalid-feedback" id="lastNameError"></div>
+    </div>
+   </div>
+
+   <div class="form-group">
+    <label for="address">ที่อยู่:</label>
+    <textarea
+            class="form-control" id="address" placeholder="กรอกที่อยู่ ความยาวไม่ต่ำกว่า 15 ตัวอักษร"
+            rows="3"
+    ></textarea>
+    <div class="invalid-feedback" id="addressError"></div>
+   </div>
+
+   <div class="d-flex flex-row justify-content-between gap-3">
+    <div class="form-group w-50">
+     <label for="subdistrict">ตำบล/แขวง:</label>
+     <input
+             class="form-control" id="subdistrict"
+             placeholder="กรอกตำบล/แขวง ความยาวไม่ต่ำกว่า 2 ตัวอักษร"
+             type="text"
+     >
+     <div class="invalid-feedback" id="subdistrictError"></div>
+    </div>
+    <div class="form-group w-50">
+     <label for="district">อำเภอ/เขต:</label>
+     <input
+             class="form-control" id="district" placeholder="กรอกอำเภอ/เขต ความยาวไม่ต่ำกว่า 2 ตัวอักษร"
+             type="text"
+     >
+     <div class="invalid-feedback" id="districtError"></div>
+    </div>
+   </div>
+
+   <div class="d-flex flex-row justify-content-between gap-3">
+    <div class="form-group w-50">
+     <label>จังหวัด:</label>
+     <select class="form-control" id="province" name="province">
+      <option selected value="">--------- เลือกจังหวัด ---------</option>
+      <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+      <option value="กระบี่">กระบี่</option>
+      <option value="กาญจนบุรี">กาญจนบุรี</option>
+      <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+      <option value="กำแพงเพชร">กำแพงเพชร</option>
+      <option value="ขอนแก่น">ขอนแก่น</option>
+      <option value="จันทบุรี">จันทบุรี</option>
+      <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+      <option value="ชัยนาท">ชัยนาท</option>
+      <option value="ชัยภูมิ">ชัยภูมิ</option>
+      <option value="ชุมพร">ชุมพร</option>
+      <option value="ชลบุรี">ชลบุรี</option>
+      <option value="เชียงใหม่">เชียงใหม่</option>
+      <option value="เชียงราย">เชียงราย</option>
+      <option value="ตรัง">ตรัง</option>
+      <option value="ตราด">ตราด</option>
+      <option value="ตาก">ตาก</option>
+      <option value="นครนายก">นครนายก</option>
+      <option value="นครปฐม">นครปฐม</option>
+      <option value="นครพนม">นครพนม</option>
+      <option value="นครราชสีมา">นครราชสีมา</option>
+      <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+      <option value="นครสวรรค์">นครสวรรค์</option>
+      <option value="นราธิวาส">นราธิวาส</option>
+      <option value="น่าน">น่าน</option>
+      <option value="นนทบุรี">นนทบุรี</option>
+      <option value="บึงกาฬ">บึงกาฬ</option>
+      <option value="บุรีรัมย์">บุรีรัมย์</option>
+      <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+      <option value="ปทุมธานี">ปทุมธานี</option>
+      <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+      <option value="ปัตตานี">ปัตตานี</option>
+      <option value="พะเยา">พะเยา</option>
+      <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+      <option value="พังงา">พังงา</option>
+      <option value="พิจิตร">พิจิตร</option>
+      <option value="พิษณุโลก">พิษณุโลก</option>
+      <option value="เพชรบุรี">เพชรบุรี</option>
+      <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+      <option value="แพร่">แพร่</option>
+      <option value="พัทลุง">พัทลุง</option>
+      <option value="ภูเก็ต">ภูเก็ต</option>
+      <option value="มหาสารคาม">มหาสารคาม</option>
+      <option value="มุกดาหาร">มุกดาหาร</option>
+      <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+      <option value="ยโสธร">ยโสธร</option>
+      <option value="ยะลา">ยะลา</option>
+      <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+      <option value="ระนอง">ระนอง</option>
+      <option value="ระยอง">ระยอง</option>
+      <option value="ราชบุรี">ราชบุรี</option>
+      <option value="ลพบุรี">ลพบุรี</option>
+      <option value="ลำปาง">ลำปาง</option>
+      <option value="ลำพูน">ลำพูน</option>
+      <option value="เลย">เลย</option>
+      <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+      <option value="สกลนคร">สกลนคร</option>
+      <option value="สงขลา">สงขลา</option>
+      <option value="สมุทรสาคร">สมุทรสาคร</option>
+      <option value="สมุทรปราการ">สมุทรปราการ</option>
+      <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+      <option value="สระแก้ว">สระแก้ว</option>
+      <option value="สระบุรี">สระบุรี</option>
+      <option value="สิงห์บุรี">สิงห์บุรี</option>
+      <option value="สุโขทัย">สุโขทัย</option>
+      <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+      <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+      <option value="สุรินทร์">สุรินทร์</option>
+      <option value="สตูล">สตูล</option>
+      <option value="หนองคาย">หนองคาย</option>
+      <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+      <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+      <option value="อุดรธานี">อุดรธานี</option>
+      <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+      <option value="อุทัยธานี">อุทัยธานี</option>
+      <option value="อุบลราชธานี">อุบลราชธานี</option>
+      <option value="อ่างทอง">อ่างทอง</option>
+     </select>
+     <div class="invalid-feedback" id="provinceError"></div>
+    </div>
+    <div class="form-group w-50">
+     <label for="zipcode">รหัสไปรษณีย์:</label>
+     <input class="form-control" id="zipcode" placeholder="กรอกรหัสไปรษณีย์" type="text">
+     <div class="invalid-feedback" id="zipcodeError"></div>
+    </div>
+   </div>
+   <button class="btn btn-primary mt-3" onclick="submitForm()" type="button">Submit</button>
+  </form>
+ </div>
+ <div class="mt-4 form-container blur-effect">
+  <table class="table table-bordered" id="table">
+   <thead class="bg-light bg-gradient">
+   <tr>
+    <th>ลำดับที่</th>
+    <th>รหัสบัตรประชาชน</th>
+    <th>ชื่อจริงและนามสกุล</th>
+    <th>ที่อยู่</th>
+    <th>Delete</th>
+   </tr>
+   </thead>
+   <tbody>
+   </tbody>
+  </table>
+ </div>
 </div>
 
 <div align="right" class="emailspin"><img border="0" src="../assets/emailspin.gif"><br>
-    65070089@kmitl.ac.th<br>
-    Any problem with the website, feel free to contact me.
+ 65070089@kmitl.ac.th<br>
+ Any problem with the website, feel free to contact me.
 </div>
 </body>
 

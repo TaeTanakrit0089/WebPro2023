@@ -2,79 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="#2242A6" name="theme-color">
-    <title>65070089 - Fundamental Web Programming Lab.</title>
-    <link href="styles.css?v=1.0" rel="stylesheet">
-    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <meta charset="UTF-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <meta content="#2242A6" name="theme-color">
+ <title>65070089 - Fundamental Web Programming Lab.</title>
+ <link href="styles.css?v=1.0" rel="stylesheet">
+ <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 <nav class="topnav">
-    <div class="sook_north">
-        <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
-    </div>
-    <div class="sook_south"></div>
+ <div class="sook_north">
+  <div class="sook_text">King Mongkut's Institute of Technology Ladkrabang</div>
+ </div>
+ <div class="sook_south"></div>
 </nav>
 <div class="" id="body_container" style="margin-top: 31px">
-    <div class="form-container blur-effect" id="form" style="padding: 26px">
-        <h1 id="title">Students List</h1>
-        <div class="d-flex flex-row gap-5 mt-4">
-            <!--ID Input        -->
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="formStudentIDTitle">Student ID:</span>
-                </div>
-                <input class="form-control" id="formStudentIDInput"
-                       placeholder="Student ID"
-                       type="number">
-            </div>
-            <!--Name Input        -->
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="formNameTitle">First Name:</span>
-                </div>
-                <input class="form-control" id="formNameInput"
-                       placeholder="Tanakrit"
-                       type="text">
-            </div>
-            <!--Surname Input        -->
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="formSurnameTitle">Last Name:</span>
-                </div>
-                <input class="form-control" id="formSurnameInput"
-                       placeholder="Supprasit"
-                       type="text">
-            </div>
-        </div>
-        <div class="d-flex flex-row">
-            <button class="btn btn-primary mt-1" id="submitBtn" onclick="addTableRow()">Add</button>
-        </div>
+ <div class="form-container blur-effect" id="form" style="padding: 26px">
+  <h1 id="title">Students List</h1>
+  <div class="d-flex flex-row gap-5 mt-4">
+   <!--ID Input        -->
+   <div class="input-group mb-3">
+    <div class="input-group-prepend">
+     <span class="input-group-text" id="formStudentIDTitle">Student ID:</span>
     </div>
+    <input
+            class="form-control" id="formStudentIDInput"
+            placeholder="Student ID"
+            type="number"
+    >
+   </div>
+   <!--Name Input        -->
+   <div class="input-group mb-3">
+    <div class="input-group-prepend">
+     <span class="input-group-text" id="formNameTitle">First Name:</span>
+    </div>
+    <input
+            class="form-control" id="formNameInput"
+            placeholder="Tanakrit"
+            type="text"
+    >
+   </div>
+   <!--Surname Input        -->
+   <div class="input-group mb-3">
+    <div class="input-group-prepend">
+     <span class="input-group-text" id="formSurnameTitle">Last Name:</span>
+    </div>
+    <input
+            class="form-control" id="formSurnameInput"
+            placeholder="Supprasit"
+            type="text"
+    >
+   </div>
+  </div>
+  <div class="d-flex flex-row">
+   <button class="btn btn-primary mt-1" id="submitBtn" onclick="addTableRow()">Add</button>
+  </div>
+ </div>
 
-    <div class="form-container blur-effect mt-3" style="padding: 26px">
-        <table class="table table-bordered" id="table">
-            <thead class="bg-light bg-gradient">
-            <tr>
-                <th>#</th>
-                <th>Student Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
+ <div class="form-container blur-effect mt-3" style="padding: 26px">
+  <table class="table table-bordered" id="table">
+   <thead class="bg-light bg-gradient">
+   <tr>
+    <th>#</th>
+    <th>Student Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+   </tr>
+   </thead>
+   <tbody>
+   </tbody>
+  </table>
+ </div>
 
 </div>
 
 <div align="right" class="emailspin"><img alt="" border="0" src="../assets/emailspin.gif"><br>
-    65070089@kmitl.ac.th<br>
-    Any problem with the website, feel free to contact me.
+ 65070089@kmitl.ac.th<br>
+ Any problem with the website, feel free to contact me.
 </div>
 </body>
 
