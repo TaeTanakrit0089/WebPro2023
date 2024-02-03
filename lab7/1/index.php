@@ -11,7 +11,7 @@
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <?php function generateMultiplicationTable($number) {
-    echo "<table class=\"table\" style=\"max-width: 300px; font-size: 26px\"><tbody>";
+    echo "<table class=\"\" style=\"width: 240px; font-size: 22px\"><tbody>";
     for ($i = 1; $i <= 12; $i++) {
         echo "<tr>";
         echo "<td>$number</td>" .
@@ -31,7 +31,7 @@
     <div class="sook_north d-flex justify-content-between">
         <div class="d-flex flex-row">
             <div class="nav-item active">
-                <a class="nav-link text-white" href="#">Home</a>
+                <a class="nav-link text-white" href="/">Home</a>
             </div>
         </div>
         <div class="my-auto py-0 sook_text"><a
@@ -45,7 +45,7 @@
 
 <div class="" id="body_container" style="margin-top: 31px">
 
-    <form id="form1" action="index.php" method="post">
+    <form id="form1" action="index.php" method="get">
         <p>
             <label>Enter a number :</label>
             <input type="text" id="value" name="value" value=""/>
@@ -53,14 +53,14 @@
 
         <input type="submit" id="submit" name="submit" value="Submit">
     </form>
-
-    <?php
-    if (isset($_POST['value'])) {
-        $number = $_POST['value'];
-        if (!empty($number))
-            generateMultiplicationTable($number);
-    }
-    ?>
+    <div class="mt-4">
+        <?php
+        if (isset($_GET['value'])) {
+            $number = $_GET['value'];
+            if (!empty($number))
+                generateMultiplicationTable($number);
+        }
+        ?></div>
 
 
 </div>
