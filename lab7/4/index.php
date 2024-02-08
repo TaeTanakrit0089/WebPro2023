@@ -85,7 +85,7 @@ echo '<div id="img-box" class="d-flex flex-row gap-2 justify-content-center">
         <div class="d-flex flex-column gap-2">
            ' . $column4 . '
         </div>
-    </div>
+    </div>';
 
 
     ?>
