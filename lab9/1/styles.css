@@ -31,7 +31,7 @@
 
 
 body {
-    background-image: url("../../assets/stone.gif");
+    background-image: url("../assets/stone.gif");
     font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     margin: 0;
 }

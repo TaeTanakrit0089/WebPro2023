@@ -41,9 +41,9 @@
     <div class="mt-4">
         <?php
         $servername = "127.0.0.1";
-        $username = "root"; //ตามที่กำหนดให้
-        $password = ""; //ตามที่กำหนดให้
-        $dbname = "lab9";    //ตามที่กำหนดให้
+        $username = "S089L"; //ตามที่กำหนดให้
+        $password = "JJ21666"; //ตามที่กำหนดให้
+        $dbname = "s089l";    //ตามที่กำหนดให้
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         // Check connection
@@ -90,7 +90,7 @@
 
 </div>
 
-<div align="right" class="emailspin"><img alt="" border="0" src="../../assets/emailspin.gif"><br>
+<div align="right" class="emailspin"><img alt="" border="0" src="../assets/emailspin.gif"><br>
     65070089@kmitl.ac.th<br>
     Any problem with the website, feel free to contact me.
 </div>
