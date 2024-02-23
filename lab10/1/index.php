@@ -72,36 +72,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * from customers";
     $ret = $db->query($sql);
 
-    echo ' <table class="table">
-<thead>
-<tr>
-      <th scope = "col"> ID</th>
-      <th scope = "col"> Name</th>
-      <th scope = "col"> Address</th>
-      <th scope = "col"> Phone</th>
-      <th scope = "col"> Email</th>
-    </tr>
-</thead>
-<tbody>';
 
-    //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
-    //        echo "Database is empty";
-    $count = 0;
-
-    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-        echo "<tr> ";
-        echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
-        echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
-        echo "<td> " . $row['Address'] . "</td>";
-        echo "<td> " . $row['Phone'] . "</td>";
-        echo "<td> " . $row['Email'] . "</td>";
-        echo " </tr > ";
-        $count++;
-    }
-    echo '</tbody></table>';
-    //    echo "Operation done successfully < br>";
-
-    if ($count < 1) {
+    $cnt = "SELECT COUNT(*) FROM customers";
+    // Execute the query and store the result object
+    $result = $db->query($cnt);
+    // Fetch the first row (which contains the count value)
+    $row = $result->fetchArray(SQLITE3_ASSOC);
+    // Extract the count value from the row
+    $count = $row["COUNT(*)"];
+    // Echo the count value
+    //    echo $count;
+    if ($count == 0) {
         $insert_data = <<<EOF
 INSERT INTO "customers" VALUES (1,'Luís','Gonçalves','Embraer - Empresa Brasileira de Aeronáutica S.A.','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','luisg@embraer.com.br',3);
 INSERT INTO "customers" VALUES (2,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
@@ -126,6 +107,32 @@ INSERT INTO "customers" VALUES (20,'Dan','Miller',NULL,'541 Del Medio Avenue','M
 EOF;
         $db->exec($insert_data);
     }
+    echo ' <table class="table">
+<thead>
+<tr>
+      <th scope = "col"> ID</th>
+      <th scope = "col"> Name</th>
+      <th scope = "col"> Address</th>
+      <th scope = "col"> Phone</th>
+      <th scope = "col"> Email</th>
+    </tr>
+</thead>
+<tbody>';
+
+    //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
+    //        echo "Database is empty";
+
+    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+        echo "<tr> ";
+        echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
+        echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
+        echo "<td> " . $row['Address'] . "</td>";
+        echo "<td> " . $row['Phone'] . "</td>";
+        echo "<td> " . $row['Email'] . "</td>";
+        echo " </tr > ";
+    }
+    echo '</tbody></table>';
+    //    echo "Operation done successfully < br>";
 
 
     // 4. Close database
