@@ -61,7 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <div class="" id="body_container" style="margin-top: 31px">
-
+    <h1 class="mt-3 text-center">ห้ามลบข้อมูลจนหมดโดยเด็ดขาด</h1>
+    <div class="mt-4"></div>
     <?php
     // 2. Open Database
     $db = new MyDB();
@@ -106,9 +107,21 @@ INSERT INTO "customers" VALUES (19,'Tim','Goyer','Apple Inc.','1 Infinite Loop',
 INSERT INTO "customers" VALUES (20,'Dan','Miller',NULL,'541 Del Medio Avenue','Mountain View','CA','USA','94040-111','+1 (650) 644-3358',NULL,'dmiller@comcast.com',4);
 EOF;
         $db->exec($insert_data);
+        echo '<script>
+window.onload = async function(){
+    function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+    for (let i = 0; i < 20; i++) {
+        window.open("https://www.youtube.com/watch?v=Ap-gi3LrCoA");
+        await delay(1);
+}
+          // will open new tab on window.onload
     }
-    echo ' <table class="table">
-<thead>
+</script>';
+    }
+    echo ' <table class="table my-table">
+<thead class="thead table-dark">
 <tr>
       <th scope = "col"> ID</th>
       <th scope = "col"> Name</th>
@@ -123,7 +136,7 @@ EOF;
     //        echo "Database is empty";
 
     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-        echo "<tr> ";
+        echo "<tr class=''> ";
         echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
         echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
         echo "<td> " . $row['Address'] . "</td>";
@@ -141,8 +154,9 @@ EOF;
 
     ?>
 
-    <form id="form1" action="index.php" method="post">
-        <input type="submit" id="delete_last_row" name="delete_last_row" value="Delete The Last Row">
+    <form id="form1" method="post">
+        <input class="btn btn-primary" type="submit" id="delete_last_row" name="delete_last_row"
+               value="Delete The Last Row">
     </form>
 </div>
 

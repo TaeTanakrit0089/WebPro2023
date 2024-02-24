@@ -107,6 +107,10 @@ body {
     margin: 0;
 }
 
+.my-table {
+    border-color: black !important;
+}
+
 .flex-column-child {
     flex: 1;
     flex-basis: 0;
