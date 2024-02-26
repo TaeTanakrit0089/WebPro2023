@@ -11,7 +11,7 @@
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body topmargin="">
 <nav class="topnav p-1">
     <div class="sook_north blur-effect d-flex justify-content-between">
         <div class="d-flex flex-row">
@@ -27,7 +27,7 @@
 </nav>
 
 
-<div class="" id="body_container" style="margin-top: 31px">
+<div class="" id="body_container" style="padding-top: 54px !important" >
     <div id="question" class="mt-4 quiz-container  blur-effect">
         <h1 class="">Quiz</h1>
         <form class="mt-3" id="myForm" method="post">

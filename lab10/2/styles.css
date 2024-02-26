@@ -20,8 +20,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover; /* Ensure image covers the entire viewport */
     background-position: center center; /* Center the image horizontally and vertically */
-    margin: 0; /* Remove default margin for full-screen effect */
-
+    margin: 0 !important;
+    padding: 0 !important;
+    height: calc(100vh);
     font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
