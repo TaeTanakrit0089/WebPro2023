@@ -22,7 +22,7 @@ body {
     background-position: center center; /* Center the image horizontally and vertically */
     margin: 0 !important;
     padding: 0 !important;
-    height: calc(100vh);
+    min-height: calc(100vh);
     font-family: Sarabun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
@@ -41,7 +41,7 @@ body {
 
 }
 
-#result {
+#result, #question {
     display: none;
 }
 
@@ -61,15 +61,15 @@ body {
 .sook_north {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 6px 6px 0 0;
-    background: #2c538f !important;
-    max-height: 57px;
+    background: rgba(44, 83, 143, 0.88) !important;
+    max-height: 57px !important;
 }
 
 .sook_south {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 0 0 6px 6px;
-    background: #e89837 !important;
-    height: 6px;
+    background: rgba(232, 152, 55, 0.88) !important;
+    height: 6px !important;
 }
 
 .sook_text {
@@ -95,9 +95,6 @@ body {
     backface-visibility: hidden;
     background: rgba(245, 245, 247, .82);
     opacity: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
 }
 
 .form-container {

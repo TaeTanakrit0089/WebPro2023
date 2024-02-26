@@ -6,7 +6,7 @@
     <meta content="width = device - width, initial - scale = 1.0" name="viewport">
     <meta content="#2242A6" name="theme-color">
     <title>65070089 - Fundamental Web Programming Lab .</title>
-    <link href="styles.css?v=1.0" rel="stylesheet">
+    <link href="styles.css?v=1.2" rel="stylesheet">
     <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -27,7 +27,28 @@
 </nav>
 
 
-<div class="" id="body_container" style="padding-top: 54px !important" >
+<div class="" id="body_container" style="padding-top: 54px !important">
+    <div id="intro" class="mt-4 quiz-container  blur-effect">
+        <h1>Morality and Ethics!</h1>
+        <ol class="mt-4" style="font-size: 22px; font-weight: 300">
+            <li>คุณธรรมและจริยธรรมที่จะส่งเสริมในวิชานี้คือ ความซื่อสัตย์  ซึ่งนักศึกษาจะต้องยึดถือไว้อย่างเคร่งครัด
+            </li>
+            <li>ในการทดสอบสอบย่อย (Quiz) หากพบว่านักศึกษาทำการทุจริต เช่น รับความช่วยเหลือจากผู้อื่น
+                หรือให้ความช่วยเหลือผู้อื่น ฯลฯ นักศึกษาจะได้รับการลงโทษ คือ จะปรับผลคะแนนการทดสอบย่อย (Quiz)
+                ทั้งหมดทุกครั้งในวิชานี้เป็น 0
+            </li>
+            <li>ในการสอบกลางภาคและสอบปลายภาค หากพบว่ามีการทุจริต นักศึกษาจะถูกดำเนินการทางวินัยตามข้อบังคับสถาบัน</li>
+        </ol>
+        <form id="startQuiz" method="post">
+            <div class="d-flex flex-row justify-content-center">
+                <input class="btn btn-primary mt-3" type="submit" id="startQuiz" name="startQuiz"
+                        value="Start Quiz">
+            </div>
+
+        </form>
+    </div>
+
+
     <div id="question" class="mt-4 quiz-container  blur-effect">
         <h1 class="">Quiz</h1>
         <form class="mt-3" id="myForm" method="post">

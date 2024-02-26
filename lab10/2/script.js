@@ -1,12 +1,16 @@
 const form = document.getElementById('myForm');
+const startQuiz = document.getElementById('startQuiz');
 const submitBtn = document.getElementById('submitBtn');
 
 var current_question = 0;
 var answers = [];
 
-if (current_question === 0)
+startQuiz.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("question").style.display = "block";
     pushForm()
-
+})
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default form submission
 

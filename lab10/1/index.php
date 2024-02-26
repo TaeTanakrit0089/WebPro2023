@@ -39,14 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta content="width = device - width, initial - scale = 1.0" name="viewport">
     <meta content="#2242A6" name="theme-color">
     <title>65070089 - Fundamental Web Programming Lab .</title>
-    <link href="styles.css?v=1.0" rel="stylesheet">
+    <link href="styles.css?v=1.1" rel="stylesheet">
     <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-<nav class="topnav">
-    <div class="sook_north d-flex justify-content-between">
+<nav class="topnav p-1">
+    <div class="sook_north blur-effect d-flex justify-content-between">
         <div class="d-flex flex-row">
             <div class="nav-item active">
                 <a class="nav-link text-white" href="/"> Home</a>
@@ -56,35 +56,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     class="nav-link text-white" href="https://youtu.be/XT_aaSkD5rs?si=xGK5Kh-LRoW43eOQ&t=4">
                 King Mongkut's Institute of Technology Ladkrabang</a></div>
     </div>
-    <div class="sook_south"></div>
+    <div class="sook_south blur-effect"></div>
 </nav>
 
 
-<div class="" id="body_container" style="margin-top: 31px">
-    <h1 class="mt-3 text-center">ห้ามลบข้อมูลจนหมดโดยเด็ดขาด</h1>
-    <div class="mt-4"></div>
-    <?php
-    // 2. Open Database
-    $db = new MyDB();
-    if (!$db)
-        echo $db->lastErrorMsg();
+<div class="" id="body_container" style="padding-top: 74px">
+    <div id="" class=" quiz-container  blur-effect">
+        <h1 class="mt-3 text-center">Customers List</h1>
+        <div class="mt-4"></div>
+        <?php
+        // 2. Open Database
+        $db = new MyDB();
+        if (!$db)
+            echo $db->lastErrorMsg();
 
-    // 3. Query Execution
-    $sql = "SELECT * from customers";
-    $ret = $db->query($sql);
+        // 3. Query Execution
+        $sql = "SELECT * from customers";
+        $ret = $db->query($sql);
 
 
-    $cnt = "SELECT COUNT(*) FROM customers";
-    // Execute the query and store the result object
-    $result = $db->query($cnt);
-    // Fetch the first row (which contains the count value)
-    $row = $result->fetchArray(SQLITE3_ASSOC);
-    // Extract the count value from the row
-    $count = $row["COUNT(*)"];
-    // Echo the count value
-    //    echo $count;
-    if ($count == 0) {
-        $insert_data = <<<EOF
+        $cnt = "SELECT COUNT(*) FROM customers";
+        // Execute the query and store the result object
+        $result = $db->query($cnt);
+        // Fetch the first row (which contains the count value)
+        $row = $result->fetchArray(SQLITE3_ASSOC);
+        // Extract the count value from the row
+        $count = $row["COUNT(*)"];
+        // Echo the count value
+        //    echo $count;
+        if ($count == 0) {
+            $insert_data = <<<EOF
 INSERT INTO "customers" VALUES (1,'Luís','Gonçalves','Embraer - Empresa Brasileira de Aeronáutica S.A.','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','luisg@embraer.com.br',3);
 INSERT INTO "customers" VALUES (2,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
 INSERT INTO "customers" VALUES (3,'François','Tremblay',NULL,'1498 rue Bélanger','Montréal','QC','Canada','H2G 1A7','+1 (514) 721-4711',NULL,'ftremblay@gmail.com',3);
@@ -106,8 +107,8 @@ INSERT INTO "customers" VALUES (18,'Michelle','Brooks',NULL,'627 Broadway','New 
 INSERT INTO "customers" VALUES (19,'Tim','Goyer','Apple Inc.','1 Infinite Loop','Cupertino','CA','USA','95014','+1 (408) 996-1010','+1 (408) 996-1011','tgoyer@apple.com',3);
 INSERT INTO "customers" VALUES (20,'Dan','Miller',NULL,'541 Del Medio Avenue','Mountain View','CA','USA','94040-111','+1 (650) 644-3358',NULL,'dmiller@comcast.com',4);
 EOF;
-        $db->exec($insert_data);
-        echo '<script>
+            $db->exec($insert_data);
+            echo '<script>
 window.onload = async function(){
     function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -119,8 +120,8 @@ window.onload = async function(){
           // will open new tab on window.onload
     }
 </script>';
-    }
-    echo ' <table class="table my-table">
+        }
+        echo ' <table class="table my-table">
 <thead class="thead table-dark">
 <tr>
       <th scope = "col"> ID</th>
@@ -132,38 +133,42 @@ window.onload = async function(){
 </thead>
 <tbody>';
 
-    //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
-    //        echo "Database is empty";
+        //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
+        //        echo "Database is empty";
 
-    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-        echo "<tr class=''> ";
-        echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
-        echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
-        echo "<td> " . $row['Address'] . "</td>";
-        echo "<td> " . $row['Phone'] . "</td>";
-        echo "<td> " . $row['Email'] . "</td>";
-        echo " </tr > ";
-    }
-    echo '</tbody></table>';
-    //    echo "Operation done successfully < br>";
-
-
-    // 4. Close database
-    $db->close();
+        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+            echo "<tr class=''> ";
+            echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
+            echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
+            echo "<td> " . $row['Address'] . "</td>";
+            echo "<td> " . $row['Phone'] . "</td>";
+            echo "<td> " . $row['Email'] . "</td>";
+            echo " </tr > ";
+        }
+        echo '</tbody></table>';
+        //    echo "Operation done successfully < br>";
 
 
-    ?>
+        // 4. Close database
+        $db->close();
 
-    <form id="form1" method="post">
-        <input class="btn btn-primary" type="submit" id="delete_last_row" name="delete_last_row"
-               value="Delete The Last Row">
-    </form>
+
+        ?>
+
+        <form id="form1" method="post">
+            <input class="btn btn-primary" type="submit" id="delete_last_row" name="delete_last_row"
+                   value="Delete The Last Row">
+        </form>
+    </div>
+
+
 </div>
-
-<div align="right" class="emailspin"><img alt="" border="0" src=" ../assets/emailspin.gif"><br>
+<div align="right" class="emailspin text-white"><img alt="" border="0" src=" ../assets/emailspin.gif"><br>
     65070089@kmitl.ac.th<br>
     Any problem with the website, feel free to contact me.
 </div>
+
+
 </body>
 
 </html>
