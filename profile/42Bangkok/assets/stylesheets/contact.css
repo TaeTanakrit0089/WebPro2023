@@ -1,0 +1,195 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    font-size: 100%;
+}
+
+
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#header-section {
+    margin-top: 64px;
+
+    width: 100vw;
+    height: calc(100vh - 64px);
+    align-content: center;
+}
+
+#header-container {
+    padding-left: 5vw;
+    width: 60vw;
+    margin: auto 0;
+    padding-bottom: 7%;
+
+    background: transparent;
+}
+
+.context {
+    color: #464646;
+    width: max(40%, 300px);
+}
+
+#contact-section {
+    width: 100vw;
+    height: auto;
+    background-color: rgb(245, 245, 245);
+    /* background-image: url("https://www.it.kmitl.ac.th/~pattarachai/PIC/BG/stone.gif"); */
+}
+
+#about-container {
+    /*margin: 0 auto;*/
+    width: 100%;
+    max-width: 512px;
+}
+
+.contact-row {
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 12px;
+}
+
+/*Skills*/
+
+
+.skill-box {
+    column-gap: 52px;
+}
+
+.skill-box img {
+    border-radius: 6px;
+}
+
+.skill-box h1 {
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.skill-box p {
+    font-weight: 300;
+    font-size: 15px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .skill-box {
+        flex-wrap: wrap;
+    }
+}
+
+
+#skill-parent {
+    align-content: stretch;
+    margin-top: 10px;
+    column-gap: 22px;
+    row-gap: 22px;
+
+}
+
+#skill-parent h2 {
+    font-size: 26px !important;
+    font-weight: 400 !important;
+}
+
+.skill-img {
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 12px;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.skill-img img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+
+.skill-container {
+    background: white;
+    width: calc((100% - 88px) / 4);
+    min-height: 264px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 768px) {
+    .skill-container {
+        width: calc((100% - 44px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-container {
+        width: calc(100% - 44px);
+    }
+}
+
+#name-grid-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#contact-container {
+    color: #464646;
+    margin: 10px auto 0 auto;
+    max-width: 420px;
+    row-gap: 14px;
+}
+
+#contact-container p,
+#about-container p {
+    font-weight: 200;
+}
+
+#contact-container h4,
+#about-container h4¡ {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+#contact {
+    margin-top: 20px;
+    /* background-color: white; */
+    border-radius: 20px;
+    color: #464646;
+    width: 100%;
+    /* width: max(30%, 300px); */
+}
+
+#contact-email email {
+    text-align: right;
+}
+
+
+.contact-skill {
+    padding: 0 !important;
+}
+
+.skill {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    color: #464646;
+    width: max(70%, 300px);
+}
+
+.main-container {
+    color: black;
+}
+
+h2 {
+    font-weight: 600 !important;
+    font-size: 48px !important;
+}

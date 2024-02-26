@@ -56,9 +56,13 @@
     <div id="result" class="mt-4 quiz-container">
         <h1>🎉 Congratulation!</h1>
         <div class="d-flex flex-row">
-            <h3 id="score" style="font-size: 144px; font-weight: 400">4</h3>
-            <div class="d-flex flex-column-reverse">
-                <p style="font-size: 50px">/10</p>
+            <h3 id="score" style="font-size: 144px; font-weight: 400"></h3>
+            <div style="font-size: 50px" class="d-flex flex-column-reverse">
+                <div class="d-flex flex-row">
+                    <p>/</p>
+                    <p id="all_questions"></p>
+                </div>
+
             </div>
         </div>
     </div>

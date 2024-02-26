@@ -74,6 +74,7 @@ function pushForm(data) {
 
 function showResult(data) {
     document.getElementById("score").innerText = data["total_score"];
+    document.getElementById("all_questions").innerText = data["all_questions"];
     document.getElementById("result").style.display = "block";
     document.getElementById("question").style.display = "none";
 }

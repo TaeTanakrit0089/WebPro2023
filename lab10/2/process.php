@@ -32,7 +32,10 @@ if (isset($data_in['answer'])) {
     $row = $result->fetchArray(SQLITE3_ASSOC);
 
     if ($current_question >= $row['MAX(QID)']) {
-        $response = ["total_score" => calculatedScore($answers)];
+        $response = [
+            "total_score" => calculatedScore($answers),
+            "all_questions" => $row['MAX(QID)']
+        ];
         echo json_encode($response);
         return null;
     }
