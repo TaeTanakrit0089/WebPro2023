@@ -52,22 +52,22 @@
     <div id="question" class="mt-4 quiz-container  blur-effect">
         <h1 class="">Quiz</h1>
         <form class="mt-3" id="myForm" method="post">
-            <h3 id="q_problem">1.) What is the full form of SQL?</h3>
+            <h3 id="q_problem">Your internet is god damn slow</h3>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="ืchoice_a" name="answer" value="A">
-                <label class="form-check-label" for="ืchoice_a" id="q_a">Not Null</label>
+                <label class="form-check-label" for="ืchoice_a" id="q_a"></label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="ืchoice_b" name="answer" value="B">
-                <label class="form-check-label" for="ืchoice_b" id="q_b">Not Null</label>
+                <label class="form-check-label" for="ืchoice_b" id="q_b"></label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="ืchoice_c" name="answer" value="C">
-                <label class="form-check-label" for="ืchoice_c" id="q_c">Not Null</label>
+                <label class="form-check-label" for="ืchoice_c" id="q_c"></label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="ืchoice_d" name="answer" value="D">
-                <label class="form-check-label" for="ืchoice_d" id="q_d">Not Null</label>
+                <label class="form-check-label" for="ืchoice_d" id="q_d"></label>
             </div>
             <input class="btn btn-primary mt-3" type="submit" id="submitBtn" name="submitBtn"
                    value="Submit">
