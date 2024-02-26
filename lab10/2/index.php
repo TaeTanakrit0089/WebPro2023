@@ -42,7 +42,7 @@
         <form id="startQuiz" method="post">
             <div class="d-flex flex-row justify-content-center">
                 <input class="btn btn-primary mt-3" type="submit" id="startQuiz" name="startQuiz"
-                        value="Start Quiz">
+                       value="Start Quiz">
             </div>
 
         </form>
