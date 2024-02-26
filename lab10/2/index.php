@@ -12,8 +12,8 @@
 </head>
 
 <body>
-<nav class="topnav">
-    <div class="sook_north d-flex justify-content-between">
+<nav class="topnav p-1">
+    <div class="sook_north blur-effect d-flex justify-content-between">
         <div class="d-flex flex-row">
             <div class="nav-item active">
                 <a class="nav-link text-white" href="/"> Home</a>
@@ -23,12 +23,12 @@
                     class="nav-link text-white" href="https://youtu.be/XT_aaSkD5rs?si=xGK5Kh-LRoW43eOQ&t=4">
                 King Mongkut's Institute of Technology Ladkrabang</a></div>
     </div>
-    <div class="sook_south"></div>
+    <div class="sook_south blur-effect"></div>
 </nav>
 
 
 <div class="" id="body_container" style="margin-top: 31px">
-    <div id="question" class="mt-4 quiz-container">
+    <div id="question" class="mt-4 quiz-container  blur-effect">
         <h1 class="">Quiz</h1>
         <form class="mt-3" id="myForm" method="post">
             <h3 id="q_problem">1.) What is the full form of SQL?</h3>
@@ -53,7 +53,7 @@
         </form>
     </div>
 
-    <div id="result" class="mt-4 quiz-container">
+    <div id="result" class="mt-4 quiz-container  blur-effect">
         <h1>🎉 Congratulation!</h1>
         <div class="d-flex flex-row">
             <h3 id="score" style="font-size: 144px; font-weight: 400"></h3>
@@ -70,7 +70,7 @@
 
 </div>
 
-<div align="right" class="emailspin"><img alt="" border="0" src=" ../assets/emailspin.gif"><br>
+<div align="right" class="emailspin" style="color: white"><img alt="" border="0" src=" ../assets/emailspin.gif"><br>
     65070089@kmitl.ac.th<br>
     Any problem with the website, feel free to contact me.
 </div>
