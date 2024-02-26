@@ -29,27 +29,3 @@ iframe {
     margin: 0 5px;
 }
 
-
-.sook_header {
-    width: 100%;
-}
-
-.sook_north {
-    background: #2242A6;
-    max-height: 25px;
-}
-
-.sook_south {
-    background: orange;
-    height: 0.5vh;
-}
-
-.sook_text {
-    font-size: 90%;
-    font-family: "Helvetica Neue", serif;
-    padding: 5px;
-    text-align: right;
-    color: white;
-    height: 100%;
-    margin-top: -7px;
-}
