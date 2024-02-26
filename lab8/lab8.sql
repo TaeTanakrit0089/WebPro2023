@@ -268,7 +268,8 @@ ALTER TABLE `advisor`
     ADD CONSTRAINT `advisor_ibfk_1` FOREIGN KEY (`s_id`) REFERENCES `student` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `advisor_ibfk_2` FOREIGN KEY (`i_id`) REFERENCES `instructor` (`ID`) ON
 DELETE
-CASCADE ON UPDATE CASCADE;
+CASCADE ON
+UPDATE CASCADE;
 
 --
 -- Constraints for table `course`
@@ -289,7 +290,8 @@ ALTER TABLE `prereq`
     ADD CONSTRAINT `prereq_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `prereq_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`course_id`) ON
 DELETE
-CASCADE ON UPDATE CASCADE;
+CASCADE ON
+UPDATE CASCADE;
 
 --
 -- Constraints for table `section`
@@ -311,7 +313,8 @@ ALTER TABLE `takes`
     ADD CONSTRAINT `takes_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `student` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `takes_ibfk_2` FOREIGN KEY (`course_id`,`sec_id`,`semester`,`year`) REFERENCES `section` (`course_id`, `sec_id`, `semester`, `year`) ON
 DELETE
-CASCADE ON UPDATE CASCADE;
+CASCADE ON
+UPDATE CASCADE;
 
 --
 -- Constraints for table `teaches`
@@ -320,7 +323,8 @@ ALTER TABLE `teaches`
     ADD CONSTRAINT `teaches_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `instructor` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `teaches_ibfk_2` FOREIGN KEY (`course_id`,`sec_id`,`semester`,`year`) REFERENCES `section` (`course_id`, `sec_id`, `semester`, `year`) ON
 DELETE
-CASCADE ON UPDATE CASCADE;
+CASCADE ON
+UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

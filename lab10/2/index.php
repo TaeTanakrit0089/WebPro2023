@@ -30,7 +30,7 @@
 <div class="" id="body_container" style="margin-top: 31px">
     <div id="question" class="mt-4 quiz-container">
         <h1 class="">Quiz</h1>
-        <form id="myForm" method="post">
+        <form class="mt-3" id="myForm" method="post">
             <h3 id="q_problem">1.) What is the full form of SQL?</h3>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="ืchoice_a" name="answer" value="A">
@@ -56,13 +56,11 @@
     <div id="result" class="mt-4 quiz-container">
         <h1>🎉 Congratulation!</h1>
         <div class="d-flex flex-row">
-            <h3 style="font-size: 144px; font-weight: 400">4</h3>
+            <h3 id="score" style="font-size: 144px; font-weight: 400">4</h3>
             <div class="d-flex flex-column-reverse">
                 <p style="font-size: 50px">/10</p>
             </div>
-
         </div>
-
     </div>
 
 

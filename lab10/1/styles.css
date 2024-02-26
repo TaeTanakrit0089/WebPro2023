@@ -116,6 +116,7 @@ body {
     flex-basis: 0;
 }
 
+
 @media screen and (max-width: 600px) {
     .flex-column-child {
         width: 100%;

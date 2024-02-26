@@ -56,7 +56,7 @@ function pushForm(data) {
         .then(response => response.json()) // Parse response as JSON
         .then(data => {
             if (data.hasOwnProperty("total_score")) {
-                return showResult();
+                return showResult(data);
             }
             console.log(data)
             document.getElementById("q_problem").innerText = data["QID"] + ".) " + data["Stem"]
@@ -72,6 +72,8 @@ function pushForm(data) {
         .catch(error => console.error(error)); // Handle errors
 }
 
-function showResult() {
-
+function showResult(data) {
+    document.getElementById("score").innerText = data["total_score"];
+    document.getElementById("result").style.display = "block";
+    document.getElementById("question").style.display = "none";
 }
