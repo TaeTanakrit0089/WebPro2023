@@ -1,7 +1,6 @@
 <?php
 
-class MyDB extends SQLite3
-{
+class MyDB extends SQLite3 {
     function __construct() {
         $this->open('customers.db');
     }

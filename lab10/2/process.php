@@ -3,8 +3,7 @@
 $current_question = 1;
 
 // 1. Connect to Database
-class MyDB extends SQLite3
-{
+class MyDB extends SQLite3 {
     function __construct() {
         $this->open('questions.db');
     }

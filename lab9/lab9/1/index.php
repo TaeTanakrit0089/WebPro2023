@@ -72,13 +72,18 @@ if (isset($_POST['submit']) && isset($_POST['recordNumber'])) {
 <body>
 <div class="body-container">
     <h1>Instructor Info</h1>
-    <span style="color: red; padding: 20px;"><?php echo $error ?></span>
+    <span style="color: red; padding: 20px;"><?php
+        echo $error ?></span>
     <div style="padding-left: 40px; padding-top: 10px">
         <form method="post" action="index.php">
-            <label>Instructor ID: <span style="color: red;"><?php echo $course_id; ?></span> </label> <br><br>
-            <label>Name: <span style="color: red;"><?php echo $name; ?></span></label> <br><br>
-            <label>Dept Name: <span style="color: red;"><?php echo $dept_name; ?></span></label> <br><br>
-            <label>Salary: <span style="color: red;"><?php echo $salary; ?></span></label> <br><br>
+            <label>Instructor ID: <span style="color: red;"><?php
+                    echo $course_id; ?></span> </label> <br><br>
+            <label>Name: <span style="color: red;"><?php
+                    echo $name; ?></span></label> <br><br>
+            <label>Dept Name: <span style="color: red;"><?php
+                    echo $dept_name; ?></span></label> <br><br>
+            <label>Salary: <span style="color: red;"><?php
+                    echo $salary; ?></span></label> <br><br>
             <label>Enter a record number:</label>
             <input type="number" id="recordNumber" name="recordNumber"><br><br>
             <button class="button" type="submit" id="submit" name="submit" value="submit">Display</button>

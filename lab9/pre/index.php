@@ -10,7 +10,8 @@
     <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<?php function generateMultiplicationTable($number) {
+<?php
+function generateMultiplicationTable($number) {
     echo "<table class=\"\" style=\"width: 240px; font-size: 22px\"><tbody>";
     for ($i = 1; $i <= 12; $i++) {
         echo "<tr>";

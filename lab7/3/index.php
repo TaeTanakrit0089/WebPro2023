@@ -76,7 +76,7 @@
             $profession = isset($_POST["profession"]) ? $_POST["profession"] : "";
             $residential = isset($_POST["residential"]) ? $_POST["residential"] : "";
 
-//            echo $residential;
+            //            echo $residential;
         }
 
 
@@ -85,13 +85,15 @@
                 <div class="form-group">
                     <label for="email">Name:</label>
                     <input type="text" class="form-control';
-        if (strlen($name) < 5 && $name !== "") echo " text-danger ";
+        if (strlen($name) < 5 && $name !== "")
+            echo " text-danger ";
         echo '" name="name" id="name" placeholder="Enter name" value="' . $name . '">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Address:</label>
                     <textarea class="form-control';
-        if (strlen($address) < 5 && $address !== "") echo " text-danger ";
+        if (strlen($address) < 5 && $address !== "")
+            echo " text-danger ";
         echo '" name="address" id="address" placeholder="Enter address">' . $address . '</textarea>
                 </div>
                 <div class="form-group">
@@ -102,7 +104,8 @@
                 <div class="form-group">
                     <label for="pwd">Profession:</label>
                     <input type="text" class="form-control';
-        if (strlen($profession) < 5 && $profession !== "") echo " text-danger ";
+        if (strlen($profession) < 5 && $profession !== "")
+            echo " text-danger ";
         echo '" name="profession" id="profession" placeholder="Enter profession" value="' . $profession . '">
                 </div>
                 <div class="form-group">

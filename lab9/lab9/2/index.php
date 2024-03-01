@@ -29,33 +29,39 @@
     <div class="container">
         <div>
             <h1>Course Details</h1>
-            <div <?php echo 'class="' . $class . '"' ?> role="alert" style="padding: 10px; margin: 10px;">
-                <?php echo $noti ?>
+            <div <?php
+            echo 'class="' . $class . '"' ?> role="alert" style="padding: 10px; margin: 10px;">
+                <?php
+                echo $noti ?>
             </div>
             <form method="post">
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Course ID:</label>
                     <input type="text" name="courseID" class="form-control"
-                           value="<?php if (isset($_GET['selectedID'])) {
+                           value="<?php
+                           if (isset($_GET['selectedID'])) {
                                echo $_GET['selectedID'];
                            } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Title:</label>
-                    <input type="text" name="title" class="form-control" value="<?php if (isset($_GET['title'])) {
+                    <input type="text" name="title" class="form-control" value="<?php
+                    if (isset($_GET['title'])) {
                         echo $_GET['title'];
                     } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Department Name:</label>
                     <input type="text" name="departmentName" class="form-control"
-                           value="<?php if (isset($_GET['dept_name'])) {
+                           value="<?php
+                           if (isset($_GET['dept_name'])) {
                                echo $_GET['dept_name'];
                            } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 25px">
                     <label>Credits:</label>
-                    <input type="number" name="credits" class="form-control" value="<?php if (isset($_GET['credits'])) {
+                    <input type="number" name="credits" class="form-control" value="<?php
+                    if (isset($_GET['credits'])) {
                         echo $_GET['credits'];
                     } ?>">
                 </div>
