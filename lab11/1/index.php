@@ -28,6 +28,65 @@
 
 
 <div class="" id="body_container" style="padding-top: 54px !important">
+    <div id="intro" class="mt-4 quiz-container  blur-effect">
+        <h1>Morality and Ethics!</h1>
+        <form id="CourseForm" action="process_form.php" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Employee ID:</label>
+                <input type="number" class="form-control" id="employee_ID"
+                       placeholder="Enter Employee ID">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Firstname:</label>
+                <input type="text" class="form-control" id="Firstname"
+                       placeholder="Enter Firstname">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Lastname:</label>
+                <input type="text" class="form-control" id="Lastname"
+                       placeholder="Enter Lastname">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Address:</label>
+                <textarea class="form-control" id="Address"
+                          placeholder="Enter Address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email:</label>
+                <input type="email" class="form-control" id="Email"
+                       placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Phone:</label>
+                <input type="text" class="form-control" id="Phone"
+                       placeholder="Enter phone number">
+            </div>
+
+            <div class="d-flex flex-row form-group gap-2">
+                <button type="submit" class="btn btn-primary" name="save">Save Data</button>
+                <button type="submit" class="btn btn-primary" name="show">Show Data</button>
+                <button type="submit" class="btn btn-primary" name="clear">Clear Data</button>
+            </div>
+            <!--            <p><label for='CourseID'>Course ID:</label>-->
+            <!--                <input type="text" id="CourseID" name="CourseID" size="7"/>-->
+            <!--            </p>-->
+            <!--            <p><label for='CourseTitle'>Title:</label>-->
+            <!--                <input type="text" id="CourseTitle" name="CourseTitle" size="25"/>-->
+            <!--            </p>-->
+            <!--            <p><label for='DeptName'>Department Name:</label>-->
+            <!--                <input type="text" id="DeptName" name="DeptName"/>-->
+            <!--            </p>-->
+            <!--            <p><label for='Credits'>Credits:</label>-->
+            <!--                <input type="text" id="Credits" name="Credits" value="0" size="3"/>-->
+            <!--            </p>-->
+            <!--            <input type="submit" value="Submit">-->
+        </form>
+    </div>
 
 
 </div>
