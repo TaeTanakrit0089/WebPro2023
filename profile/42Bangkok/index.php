@@ -1,3 +1,17 @@
+<?php
+// Connect to SQLite database
+$database = new SQLite3('database.db');
+
+// Get the visitor's IP address
+$ip_address = $_SERVER['REMOTE_ADDR'];
+
+// Insert the visitor's IP address into the database
+$database->exec("INSERT INTO visitors (ip_address) VALUES ('$ip_address')");
+
+// Close the database connection
+$database->close();
+?>
+
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="">
 <head>
@@ -124,9 +138,9 @@
             </div>
         </div>
         <div class="my-auto py-0 sook_text"><a
-                class="nav-link text-white" href="https://www.it.kmitl.ac.th/"
-        >
-            King Mongkut's Institute of Technology Ladkrabang</a></div>
+                    class="nav-link text-white" href="https://www.it.kmitl.ac.th/"
+            >
+                King Mongkut's Institute of Technology Ladkrabang</a></div>
     </div>
     <div class="sook_south blur-effect"></div>
 </nav>
