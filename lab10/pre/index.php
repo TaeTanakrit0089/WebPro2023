@@ -21,7 +21,7 @@ class MyDB extends SQLite3 {
     }
 }
 
-// 2. Open Database
+// 2_Tum. Open Database
 $db = new MyDB();
 if (!$db) {
     echo $db->lastErrorMsg();

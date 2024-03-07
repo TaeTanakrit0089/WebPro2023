@@ -72,17 +72,17 @@
             $count += 1;
         }
     }
-    echo '<div id="img-box" class="d-flex flex-row gap-2 justify-content-center">
-        <div class="d-flex flex-column gap-2">
+    echo '<div id="img-box" class="d-flex flex-row gap-2_Tum justify-content-center">
+        <div class="d-flex flex-column gap-2_Tum">
             ' . $column1 . '
         </div>
-        <div class="d-flex flex-column gap-2">
+        <div class="d-flex flex-column gap-2_Tum">
             ' . $column2 . '
         </div>
-        <div class="d-flex flex-column gap-2">
+        <div class="d-flex flex-column gap-2_Tum">
             ' . $column3 . '
         </div>
-        <div class="d-flex flex-column gap-2">
+        <div class="d-flex flex-column gap-2_Tum">
            ' . $column4 . '
         </div>
     </div>';

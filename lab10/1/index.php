@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 1. Connect to Database
 
 
-        // 2. Open Database
+        // 2_Tum. Open Database
         $db = new MyDB();
         if (!$db)
             echo $db->lastErrorMsg();
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1 class="mt-3 text-center">Customers List</h1>
         <div class="mt-4"></div>
         <?php
-        // 2. Open Database
+        // 2_Tum. Open Database
         $db = new MyDB();
         if (!$db)
             echo $db->lastErrorMsg();
@@ -86,11 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($count == 0) {
             $insert_data = <<<EOF
 INSERT INTO "customers" VALUES (1,'Luís','Gonçalves','Embraer - Empresa Brasileira de Aeronáutica S.A.','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','luisg@embraer.com.br',3);
-INSERT INTO "customers" VALUES (2,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
+INSERT INTO "customers" VALUES (2_Tum,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
 INSERT INTO "customers" VALUES (3,'François','Tremblay',NULL,'1498 rue Bélanger','Montréal','QC','Canada','H2G 1A7','+1 (514) 721-4711',NULL,'ftremblay@gmail.com',3);
 INSERT INTO "customers" VALUES (4,'Bjørn','Hansen',NULL,'Ullevålsveien 14','Oslo',NULL,'Norway','0171','+47 22 44 22 22',NULL,'bjorn.hansen@yahoo.no',4);
-INSERT INTO "customers" VALUES (5,'František','Wichterlová','JetBrains s.r.o.','Klanova 9/506','Prague',NULL,'Czech Republic','14700','+420 2 4172 5555','+420 2 4172 5555','frantisekw@jetbrains.com',4);
-INSERT INTO "customers" VALUES (6,'Helena','Holý',NULL,'Rilská 3174/6','Prague',NULL,'Czech Republic','14300','+420 2 4177 0449',NULL,'hholy@gmail.com',5);
+INSERT INTO "customers" VALUES (5,'František','Wichterlová','JetBrains s.r.o.','Klanova 9/506','Prague',NULL,'Czech Republic','14700','+420 2_Tum 4172 5555','+420 2_Tum 4172 5555','frantisekw@jetbrains.com',4);
+INSERT INTO "customers" VALUES (6,'Helena','Holý',NULL,'Rilská 3174/6','Prague',NULL,'Czech Republic','14300','+420 2_Tum 4177 0449',NULL,'hholy@gmail.com',5);
 INSERT INTO "customers" VALUES (7,'Astrid','Gruber',NULL,'Rotenturmstraße 4, 1010 Innere Stadt','Vienne',NULL,'Austria','1010','+43 01 5134505',NULL,'astrid.gruber@apple.at',5);
 INSERT INTO "customers" VALUES (8,'Daan','Peeters',NULL,'Grétrystraat 63','Brussels',NULL,'Belgium','1000','+32 02 219 03 03',NULL,'daan_peeters@apple.be',4);
 INSERT INTO "customers" VALUES (9,'Kara','Nielsen',NULL,'Sønder Boulevard 51','Copenhagen',NULL,'Denmark','1720','+453 3331 9991',NULL,'kara.nielsen@jubii.dk',4);

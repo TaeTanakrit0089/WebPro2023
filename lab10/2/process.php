@@ -9,7 +9,7 @@ class MyDB extends SQLite3 {
     }
 }
 
-// 2. Open Database
+// 2_Tum. Open Database
 $db = new MyDB();
 
 // Read JSON data from the request body

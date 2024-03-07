@@ -43,7 +43,7 @@ function validateForm() {
     // First Name
     if (firstName.value.length < 2 || firstName.value.length > 20) {
         isValid = false;
-        firstNameError.innerHTML = "กรุณากรอกชื่อ ความยาวระหว่าง 2-20 ตัวอักษร";
+        firstNameError.innerHTML = "กรุณากรอกชื่อ ความยาวระหว่าง 2_Tum-20 ตัวอักษร";
         firstName.classList.add("is-invalid");
     } else {
         firstNameError.innerHTML = "";
@@ -53,7 +53,7 @@ function validateForm() {
     // Last Name
     if (lastName.value.length < 2 || lastName.value.length > 30) {
         isValid = false;
-        lastNameError.innerHTML = "กรุณากรอกนามสกุล ความยาวระหว่าง 2-30 ตัวอักษร";
+        lastNameError.innerHTML = "กรุณากรอกนามสกุล ความยาวระหว่าง 2_Tum-30 ตัวอักษร";
         lastName.classList.add("is-invalid");
     } else {
         lastNameError.innerHTML = "";
@@ -73,7 +73,7 @@ function validateForm() {
     // Subdistrict
     if (subdistrict.value.length < 2) {
         isValid = false;
-        subdistrictError.innerHTML = "กรุณากรอกตำบล/แขวง ความยาวไม่ต่ำกว่า 2 ตัวอักษร";
+        subdistrictError.innerHTML = "กรุณากรอกตำบล/แขวง ความยาวไม่ต่ำกว่า 2_Tum ตัวอักษร";
         subdistrict.classList.add("is-invalid");
     } else {
         subdistrictError.innerHTML = "";
@@ -83,7 +83,7 @@ function validateForm() {
     // District
     if (district.value.length < 2) {
         isValid = false;
-        districtError.innerHTML = "กรุณากรอกอำเภอ/เขต ความยาวไม่ต่ำกว่า 2 ตัวอักษร";
+        districtError.innerHTML = "กรุณากรอกอำเภอ/เขต ความยาวไม่ต่ำกว่า 2_Tum ตัวอักษร";
         district.classList.add("is-invalid");
     } else {
         districtError.innerHTML = "";
