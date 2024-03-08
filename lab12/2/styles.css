@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+.box {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+}
+
+.box img {
+    height: 100%;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+body {
+    background-image: url("../assets/catalina.webp");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure image covers the entire viewport */
+    background-position: center center; /* Center the image horizontally and vertically */
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: calc(100vh);
+
+}
+
+#body_container {
+    margin: 0 auto;
+    padding: 22px 12px;
+    max-width: 1290px;
+}
+
+.quiz-container {
+    backdrop-filter: blur(15px) saturate(0.86);
+    background-color: rgba(248, 248, 252, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.21) 17px 20px 40px 0;
+    border-radius: 22px;
+    padding: 32px;
+
+}
+
+#result, #question {
+    display: none;
+}
+
+.topnav {
+    /* background-color:; */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.sook_header {
+    width: 100%;
+}
+
+.sook_north {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 6px 6px 0 0;
+    background: rgba(44, 83, 143, 0.88) !important;
+    max-height: 57px !important;
+}
+
+.sook_south {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 0 0 6px 6px;
+    background: rgba(232, 152, 55, 0.88) !important;
+    height: 6px !important;
+}
+
+.sook_text {
+    font-size: 100%;
+    font-weight: 600;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    height: 100%;
+    /* margin-top: 0px; */
+}
+
+.emailspin {
+    padding: 10px 20px;
+}
+
+
+.blur-effect {
+    --colornav-backdrop-filter-opacity: 1;
+    --colornav-bg-alpha: .8;
+    backdrop-filter: blur(22px) saturate(1.86);
+    -webkit-backdrop-filter: blur(15px) saturate(86%);
+    backface-visibility: hidden;
+    background: rgba(245, 245, 247, .82);
+    opacity: 1;
+}
+
+.form-container {
+    margin: 0 auto;
+    /*max-width: 300px;*/
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 12px;
+    padding: 12px 22px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.history-box {
+    width: 24%;
+    margin: 0;
+}
+
+.my-table {
+    border-color: black !important;
+}
+
+.flex-column-child {
+    flex: 1;
+    flex-basis: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-column-child {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
