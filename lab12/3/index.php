@@ -1,15 +1,21 @@
 <?php
 
-$index = isset($_GET['index']) ? intval($_GET['index']) : 0;
-$url = "http://10.0.15.21/lab/lab12/restapis/products.php";
-$response = file_get_contents($url);
-$result = json_decode($response);
-$response_size = count($result);
-if ($response_size < $index)
-    $index = $response_size;
-if (0 > $index)
-    $index = 0;
-$result_data = $result[$index]
+$dataPoints = array(
+    array("x" => 10, "y" => 41),
+    array("x" => 20, "y" => 35, "indexLabel" => "Lowest"),
+    array("x" => 30, "y" => 50),
+    array("x" => 40, "y" => 45),
+    array("x" => 50, "y" => 52),
+    array("x" => 60, "y" => 68),
+    array("x" => 70, "y" => 38),
+    array("x" => 80, "y" => 71, "indexLabel" => "Highest"),
+    array("x" => 90, "y" => 52),
+    array("x" => 100, "y" => 60),
+    array("x" => 110, "y" => 36),
+    array("x" => 120, "y" => 49),
+    array("x" => 130, "y" => 41)
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -44,45 +50,9 @@ $result_data = $result[$index]
 
 <div class="" id="body_container" style="padding-top: 54px !important">
     <div id="intro" class="mt-4 quiz-container  blur-effect">
-        <h1>Product Details</h1>
-        <div>
-            <strong>ID: </strong>
-            <?php
-            echo $result_data->ProductID ?>
-        </div>
-        <div>
-            <strong>Code: </strong>
-            <?php
-            echo $result_data->ProductCode ?>
-        </div>
-        <div>
-            <strong>Name: </strong>
-            <?php
-            echo $result_data->ProductName ?>
-        </div>
-        <div>
-            <strong>Description: </strong>
-            <?php
-            echo $result_data->Description ?>
-        </div>
-        <div>
-            <strong>Price: </strong>
-            <?php
-            echo $result_data->UnitPrice ?>
-        </div>
-        <form class="mt-4" id="CourseForm" method="get">
-            <div class="d-flex flex-row form-group gap-4">
-                <button value="<?php
-                echo ($index <= 0) ? 0 : $index - 1; ?>" type="submit" class="btn btn-primary" name="index">Previous
-                    Data
-                </button>
-                <button value="<?php
-                echo ($index + 1 >= $response_size - 1) ? $response_size - 1 : $index + 1; ?>" type="submit"
-                        class="btn btn-primary"
-                        name="index">Next Data
-                </button>
-            </div>
-        </form>
+        <h1 class="text-center">Price of Products</h1>
+        <div class="rounded" id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     </div>
 </div>
 
@@ -93,5 +63,29 @@ $result_data = $result[$index]
 </body>
 
 </html>
+<script>
+    window.onload = function () {
 
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            exportEnabled: true,
+            theme: "light1", // "light1", "light2", "dark1", "dark2"
+            title: {
+                text: "Simple Column Chart with Index Labels"
+            },
+            axisY: {
+                includeZero: true
+            },
+            data: [{
+                type: "column", //change type to bar, line, area, pie, etc
+                //indexLabel: "{y}", //Shows y value on all Data Points
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chart.render();
+
+    }
+</script>
 <script src="script.js"></script>
