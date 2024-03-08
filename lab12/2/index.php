@@ -34,48 +34,11 @@ session_start();
 
 <div class="" id="body_container" style="padding-top: 54px !important">
     <div id="intro" class="mt-4 quiz-container  blur-effect">
-        <h1>Form!</h1>
+        <h1>Product Details</h1>
         <form id="CourseForm" method="post">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Employee ID:</label>
-                <input type="number" class="form-control" id="employee_ID" name="employee_ID"
-                       placeholder="Enter Employee ID">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Firstname:</label>
-                <input type="text" class="form-control" id="Firstname" name="Firstname"
-                       placeholder="Enter Firstname">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Lastname:</label>
-                <input type="text" class="form-control" id="Lastname" name="Lastname"
-                       placeholder="Enter Lastname">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Address:</label>
-                <textarea class="form-control" id="Address" name="Address"
-                          placeholder="Enter Address"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email:</label>
-                <input type="email" class="form-control" id="Email" name="Email"
-                       placeholder="Enter email">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Phone:</label>
-                <input type="text" class="form-control" id="Phone" name="Phone"
-                       placeholder="Enter phone number">
-            </div>
-
-            <div class="d-flex flex-row form-group gap-2">
-                <button type="submit" class="btn btn-primary" name="save">Save Data</button>
-                <button type="submit" class="btn btn-primary" name="show">Show Data</button>
-                <button type="submit" class="btn btn-primary" name="clear" onclick="clearForm()">Clear Data</button>
+            <div class="d-flex flex-row form-group gap-4">
+                <button type="submit" class="btn btn-primary" name="prev">Previous Data</button>
+                <button type="submit" class="btn btn-primary" name="next">Next Data</button>
             </div>
         </form>
     </div>
