@@ -18,6 +18,10 @@
     margin-bottom: 1rem;
 }
 
+#intro div{
+    font-size: larger;
+}
+
 body {
     background-image: url("../assets/catalina.webp");
     background-repeat: no-repeat;
