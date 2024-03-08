@@ -1,6 +1,6 @@
 <?php
 
-$index = isset($_GET['index']) ? intval($_GET['index']) : 1;
+$index = isset($_GET['index']) ? intval($_GET['index']) : 0;
 $url = "http://10.0.15.21/lab/lab12/restapis/products.php";
 $response = file_get_contents($url);
 $result = json_decode($response);
