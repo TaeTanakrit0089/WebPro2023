@@ -1,0 +1,72 @@
+[
+  {
+    "ProductID": "1",
+    "ProductCode": "B-1",
+    "ProductName": "Chai",
+    "Description": "Black tea with a blend of cardamom, ginger, cloves and cinnamon",
+    "UnitPrice": 18
+  },
+  {
+    "ProductID": "2",
+    "ProductCode": "CO-3",
+    "ProductName": "Syrup",
+    "Description": "Pure cane syrup",
+    "UnitPrice": 10
+  },
+  {
+    "ProductID": "3",
+    "ProductCode": "CO-4",
+    "ProductName": "Cajun Seasoning",
+    "Description": "Adds zingy new taste to meat, seafood, vegetables, eggs and more",
+    "UnitPrice": 22
+  },
+  {
+    "ProductID": "4",
+    "ProductCode": "O-5",
+    "ProductName": "Olive Oil",
+    "Description": "Extra virgin for smooth taste and versatility",
+    "UnitPrice": 21.35
+  },
+  {
+    "ProductID": "5",
+    "ProductCode": "JP-6",
+    "ProductName": "Boysenberry Spread",
+    "Description": "Boy, some berries. A delicious alternative topping for toast, pancakes and waffles",
+    "UnitPrice": 25
+  },
+  {
+    "ProductID": "6",
+    "ProductCode": "DFN-7",
+    "ProductName": "Dried Pears",
+    "Description": "A sweet treat for hikers and snackers",
+    "UnitPrice": 30
+  },
+  {
+    "ProductID": "7",
+    "ProductCode": "S-8",
+    "ProductName": "Curry Sauce",
+    "Description": "Thai style red curry sauce is a zesty blend of red chili puree, coconut milk, onions, garlic and ginger",
+    "UnitPrice": 40
+  },
+  {
+    "ProductID": "8",
+    "ProductCode": "DFN-14",
+    "ProductName": "Walnuts",
+    "Description": "Shelled, energy-dense and loaded with polyunsaturated good fats. Perfect baking and snacking",
+    "UnitPrice": 23.25
+  },
+  {
+    "ProductID": "9",
+    "ProductCode": "CFV-17",
+    "ProductName": "Fruit Cocktail",
+    "Description": "Diced peaches, pears, pineapple and sweet cherries in heavy syrup",
+    "UnitPrice": 39
+  },
+  {
+    "ProductID": "10",
+    "ProductCode": "BGM-19",
+    "ProductName": "Chocolate Biscuits Mix",
+    "Description": "A flaky, buttery, chocolatey twist on traditional biscuits",
+    "UnitPrice": 9.2
+  }
+]
