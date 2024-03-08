@@ -1,8 +1,13 @@
 <?php
+include_once 'process.php';
 // web service URL
-$url = "http://10.0.15.21/lab/lab12/restapis/ws-for-barchart.php";
+$url = "http://10.0.15.21/lab/lab12/restapis/products.php?list=10";
 $response = file_get_contents($url);
 $dataPoints = json_decode($response);
+$dataConverted = convert_json($dataPoints);
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -11,22 +16,22 @@ $dataPoints = json_decode($response);
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
-                text: "Revenue Chart of Cricket Hotel"
+                text: "Price of Products"
             },
             axisY: {
                 title: "Revenue (in THB)",
                 includeZero: true,
                 prefix: "",
-                suffix: "M"
+                suffix: ""
             },
             data: [{
                 type: "column",
-                yValueFormatString: "#,##0M",
+                yValueFormatString: "#,##0",
                 indexLabel: "{y}",
                 indexLabelPlacement: "inside",
                 indexLabelFontWeight: "bolder",
                 indexLabelFontColor: "white",
-                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+                dataPoints: <?php echo json_encode($dataConverted, JSON_NUMERIC_CHECK); ?>
             }]
         });
         chart.render();
@@ -63,9 +68,9 @@ $dataPoints = json_decode($response);
 
 <div class="" id="body_container" style="padding-top: 54px !important">
     <div id="intro" class="mt-4 quiz-container  blur-effect">
-        <h1 class="text-center">Price of Products</h1>
+<!--        <h1 class="text-center">Price of Products</h1>-->
         <div class="d-flex flex-row justify-content-center">
-            <div class="rounded mt-5" id="chartContainer" style="height: 370px; width: 75%;"></div>
+            <div class="rounded" id="chartContainer" style="height: 370px; width: 75%;"></div>
         </div>
         <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     </div>
