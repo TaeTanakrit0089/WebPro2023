@@ -1,24 +1,37 @@
 <?php
-
-$dataPoints = array(
-    array("x" => 10, "y" => 41),
-    array("x" => 20, "y" => 35, "indexLabel" => "Lowest"),
-    array("x" => 30, "y" => 50),
-    array("x" => 40, "y" => 45),
-    array("x" => 50, "y" => 52),
-    array("x" => 60, "y" => 68),
-    array("x" => 70, "y" => 38),
-    array("x" => 80, "y" => 71, "indexLabel" => "Highest"),
-    array("x" => 90, "y" => 52),
-    array("x" => 100, "y" => 60),
-    array("x" => 110, "y" => 36),
-    array("x" => 120, "y" => 49),
-    array("x" => 130, "y" => 41)
-);
-
+// web service URL
+$url = "http://10.0.15.21/lab/lab12/restapis/ws-for-barchart.php";
+$response = file_get_contents($url);
+$dataPoints = json_decode($response);
 ?>
 
 <!DOCTYPE html>
+<script>
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Revenue Chart of Cricket Hotel"
+            },
+            axisY: {
+                title: "Revenue (in THB)",
+                includeZero: true,
+                prefix: "",
+                suffix: "M"
+            },
+            data: [{
+                type: "column",
+                yValueFormatString: "#,##0M",
+                indexLabel: "{y}",
+                indexLabelPlacement: "inside",
+                indexLabelFontWeight: "bolder",
+                indexLabelFontColor: "white",
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chart.render();
+    }
+</script>
 <html lang="en">
 
 <head>
