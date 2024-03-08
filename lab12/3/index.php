@@ -7,7 +7,6 @@ $dataPoints = json_decode($response);
 $dataConverted = convert_json($dataPoints);
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +67,7 @@ $dataConverted = convert_json($dataPoints);
 
 <div class="" id="body_container" style="padding-top: 54px !important">
     <div id="intro" class="mt-4 quiz-container  blur-effect">
-<!--        <h1 class="text-center">Price of Products</h1>-->
+        <!--        <h1 class="text-center">Price of Products</h1>-->
         <div class="d-flex flex-row justify-content-center">
             <div class="rounded" id="chartContainer" style="height: 370px; width: 75%;"></div>
         </div>
