@@ -1,15 +1,15 @@
 <?php
 
-$index = isset($_GET['index']) ? intval($_GET['index']) : 0;
-$url = "http://10.0.15.21/lab/lab12/restapis/products.php";
-$response = file_get_contents($url);
-$result = json_decode($response);
-$response_size = count($result);
-if ($response_size < $index)
-    $index = $response_size;
-if (0 > $index)
-    $index = 0;
-$result_data = $result[$index]
+    $index = isset($_GET['index']) ? intval($_GET['index']) : 0;
+    $url = "http://10.0.15.21/lab/lab12/restapis/products.php";
+    $response = file_get_contents($url);
+    $result = json_decode($response);
+    $response_size = count($result);
+    if ($response_size < $index)
+        $index = $response_size;
+    if (0 > $index)
+        $index = 0;
+    $result_data = $result[$index]
 ?>
 
 <!DOCTYPE html>
@@ -48,36 +48,36 @@ $result_data = $result[$index]
         <div>
             <strong>ID: </strong>
             <?php
-            echo $result_data->ProductID ?>
+                echo $result_data->ProductID ?>
         </div>
         <div>
             <strong>Code: </strong>
             <?php
-            echo $result_data->ProductCode ?>
+                echo $result_data->ProductCode ?>
         </div>
         <div>
             <strong>Name: </strong>
             <?php
-            echo $result_data->ProductName ?>
+                echo $result_data->ProductName ?>
         </div>
         <div>
             <strong>Description: </strong>
             <?php
-            echo $result_data->Description ?>
+                echo $result_data->Description ?>
         </div>
         <div>
             <strong>Price: </strong>
             <?php
-            echo $result_data->UnitPrice ?>
+                echo $result_data->UnitPrice ?>
         </div>
         <form class="mt-4" id="CourseForm" method="get">
             <div class="d-flex flex-row form-group gap-4">
                 <button value="<?php
-                echo ($index <= 0) ? 0 : $index - 1; ?>" type="submit" class="btn btn-primary" name="index">Previous
+                    echo ($index <= 0) ? 0 : $index - 1; ?>" type="submit" class="btn btn-primary" name="index">Previous
                     Data
                 </button>
                 <button value="<?php
-                echo ($index + 1 >= $response_size - 1) ? $response_size - 1 : $index + 1; ?>" type="submit"
+                    echo ($index + 1 >= $response_size - 1) ? $response_size - 1 : $index + 1; ?>" type="submit"
                         class="btn btn-primary"
                         name="index">Next Data
                 </button>

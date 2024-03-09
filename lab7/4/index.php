@@ -46,33 +46,33 @@
     <!--    </div>-->
 
     <?php
-    $column1 = "";
-    $column2 = "";
-    $column3 = "";
-    $column4 = "";
+        $column1 = "";
+        $column2 = "";
+        $column3 = "";
+        $column4 = "";
 
-    function createImgTag($filename) {
-        return '<img src="pics/' . $filename . '" alt="Avatar" class="w-100">';
-    }
-
-    $files = scandir("pics");
-    shuffle($files);
-
-    $count = 0;
-    foreach ($files as $file) {
-        if ($file != '.' && $file != '..' && substr($file, 0, 1) != '.') {
-            if ($count % 4 === 0)
-                $column1 = $column1 . createImgTag($file);
-            else if ($count % 4 === 1)
-                $column2 = $column2 . createImgTag($file);
-            else if ($count % 4 === 2)
-                $column3 = $column3 . createImgTag($file);
-            else if ($count % 4 === 3)
-                $column4 = $column4 . createImgTag($file);
-            $count += 1;
+        function createImgTag($filename) {
+            return '<img src="pics/' . $filename . '" alt="Avatar" class="w-100">';
         }
-    }
-    echo '<div id="img-box" class="d-flex flex-row gap-2_Tum justify-content-center">
+
+        $files = scandir("pics");
+        shuffle($files);
+
+        $count = 0;
+        foreach ($files as $file) {
+            if ($file != '.' && $file != '..' && substr($file, 0, 1) != '.') {
+                if ($count % 4 === 0)
+                    $column1 = $column1 . createImgTag($file);
+                else if ($count % 4 === 1)
+                    $column2 = $column2 . createImgTag($file);
+                else if ($count % 4 === 2)
+                    $column3 = $column3 . createImgTag($file);
+                else if ($count % 4 === 3)
+                    $column4 = $column4 . createImgTag($file);
+                $count += 1;
+            }
+        }
+        echo '<div id="img-box" class="d-flex flex-row gap-2_Tum justify-content-center">
         <div class="d-flex flex-column gap-2_Tum">
             ' . $column1 . '
         </div>

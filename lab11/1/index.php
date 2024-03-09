@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
     <!DOCTYPE html>
@@ -84,27 +84,27 @@ session_start();
             <h1>Database Data</h1>
             <?php
 
-            // 1. Connect to Database
-            class MyDB extends SQLite3 {
-                function __construct() {
-                    $this->open('customers.db');
+                // 1. Connect to Database
+                class MyDB extends SQLite3 {
+                    function __construct() {
+                        $this->open('customers.db');
+                    }
                 }
-            }
 
-            // 2_Tum. Open Database
-            $db = new MyDB();
-            //        if (!$db) {
-            //            echo $db->lastErrorMsg();
-            //        } else {
-            //            echo "Opened database successfully<br>";
-            //        }
+                // 2_Tum. Open Database
+                $db = new MyDB();
+                //        if (!$db) {
+                //            echo $db->lastErrorMsg();
+                //        } else {
+                //            echo "Opened database successfully<br>";
+                //        }
 
-            // 3. Query Execution
+                // 3. Query Execution
 
-            $sql = "SELECT * from customers";
-            $ret = $db->query($sql);
+                $sql = "SELECT * from customers";
+                $ret = $db->query($sql);
 
-            echo ' <table class="table my-table">
+                echo ' <table class="table my-table">
 <thead class="thead table-dark">
 <tr>
       <th scope = "col"> ID</th>
@@ -116,20 +116,20 @@ session_start();
 </thead>
 <tbody>';
 
-            while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                echo "<tr class=''> ";
-                echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
-                echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
-                echo "<td> " . $row['Address'] . "</td>";
-                echo "<td> " . $row['Phone'] . "</td>";
-                echo "<td> " . $row['Email'] . "</td>";
-                echo " </tr > ";
-            }
-            echo '</tbody></table>';
+                while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                    echo "<tr class=''> ";
+                    echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
+                    echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
+                    echo "<td> " . $row['Address'] . "</td>";
+                    echo "<td> " . $row['Phone'] . "</td>";
+                    echo "<td> " . $row['Email'] . "</td>";
+                    echo " </tr > ";
+                }
+                echo '</tbody></table>';
 
 
-            // 4. Close database
-            $db->close();
+                // 4. Close database
+                $db->close();
 
             ?>
         </div>
@@ -150,32 +150,32 @@ session_start();
 <?php
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve form data
 
 
-    // Depending on the button clicked, perform the appropriate action
-    if (isset($_POST["save"])) {
-        $employeeID = $_POST["employee_ID"];
-        $firstname = $_POST["Firstname"];
-        $lastname = $_POST["Lastname"];
-        $address = $_POST["Address"];
-        $email = $_POST["Email"];
-        $phone = $_POST["Phone"];
-        $_SESSION["employee_ID"] = $employeeID;
-        $_SESSION["Firstname"] = $firstname;
-        $_SESSION["Lastname"] = $lastname;
-        $_SESSION["Address"] = $address;
-        $_SESSION["Email"] = $email;
-        $_SESSION["Phone"] = $phone;
-    } elseif (isset($_POST["show"])) {
-        $employeeID = $_SESSION["employee_ID"];
-        $firstname = $_SESSION["Firstname"];
-        $lastname = $_SESSION["Lastname"];
-        $address = $_SESSION["Address"];
-        $email = $_SESSION["Email"];
-        $phone = $_SESSION["Phone"];
-        echo <<<EOF
+        // Depending on the button clicked, perform the appropriate action
+        if (isset($_POST["save"])) {
+            $employeeID = $_POST["employee_ID"];
+            $firstname = $_POST["Firstname"];
+            $lastname = $_POST["Lastname"];
+            $address = $_POST["Address"];
+            $email = $_POST["Email"];
+            $phone = $_POST["Phone"];
+            $_SESSION["employee_ID"] = $employeeID;
+            $_SESSION["Firstname"] = $firstname;
+            $_SESSION["Lastname"] = $lastname;
+            $_SESSION["Address"] = $address;
+            $_SESSION["Email"] = $email;
+            $_SESSION["Phone"] = $phone;
+        } elseif (isset($_POST["show"])) {
+            $employeeID = $_SESSION["employee_ID"];
+            $firstname = $_SESSION["Firstname"];
+            $lastname = $_SESSION["Lastname"];
+            $address = $_SESSION["Address"];
+            $email = $_SESSION["Email"];
+            $phone = $_SESSION["Phone"];
+            echo <<<EOF
 <script>
 window.onload = () => {
     document.getElementById("employee_ID").value = "$employeeID"
@@ -187,13 +187,13 @@ window.onload = () => {
 };
 </script>
 EOF;;
-    } elseif (isset($_POST["clear"])) {
-        session_unset();
+        } elseif (isset($_POST["clear"])) {
+            session_unset();
 
-        // Destroy the session
-        session_destroy();
+            // Destroy the session
+            session_destroy();
+        }
+        header('Refresh: 0; URL = index.php');
     }
-    header('Refresh: 0; URL = index.php');
-}
 
 ?>

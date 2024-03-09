@@ -1,43 +1,43 @@
 <?php
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve form data
 
 
-    // Depending on the button clicked, perform the appropriate action
-    if (isset($_POST["save"])) {
-        $employeeID = $_POST["employee_ID"];
-        $firstname = $_POST["Firstname"];
-        $lastname = $_POST["Lastname"];
-        $address = $_POST["Address"];
-        $email = $_POST["Email"];
-        $phone = $_POST["Phone"];
+        // Depending on the button clicked, perform the appropriate action
+        if (isset($_POST["save"])) {
+            $employeeID = $_POST["employee_ID"];
+            $firstname = $_POST["Firstname"];
+            $lastname = $_POST["Lastname"];
+            $address = $_POST["Address"];
+            $email = $_POST["Email"];
+            $phone = $_POST["Phone"];
 
-        // Set cookies for each value
-        setcookie("employee_ID", $employeeID, time() + (86400 * 30), "/");
-        setcookie("Firstname", $firstname, time() + (86400 * 30), "/");
-        setcookie("Lastname", $lastname, time() + (86400 * 30), "/");
-        setcookie("Address", $address, time() + (86400 * 30), "/");
-        setcookie("Email", $email, time() + (86400 * 30), "/");
-        setcookie("Phone", $phone, time() + (86400 * 30), "/");
-    } elseif (isset($_POST["show"])) {
-        if (
-            isset($_COOKIE["employee_ID"]) &&
-            isset($_COOKIE["Firstname"]) &&
-            isset($_COOKIE["Lastname"]) &&
-            isset($_COOKIE["Address"]) &&
-            isset($_COOKIE["Email"]) &&
-            isset($_COOKIE["Phone"])
-        ) {
-            $employeeID = $_COOKIE["employee_ID"];
-            $firstname = $_COOKIE["Firstname"];
-            $lastname = $_COOKIE["Lastname"];
-            $address = $_COOKIE["Address"];
-            $email = $_COOKIE["Email"];
-            $phone = $_COOKIE["Phone"];
+            // Set cookies for each value
+            setcookie("employee_ID", $employeeID, time() + (86400 * 30), "/");
+            setcookie("Firstname", $firstname, time() + (86400 * 30), "/");
+            setcookie("Lastname", $lastname, time() + (86400 * 30), "/");
+            setcookie("Address", $address, time() + (86400 * 30), "/");
+            setcookie("Email", $email, time() + (86400 * 30), "/");
+            setcookie("Phone", $phone, time() + (86400 * 30), "/");
+        } elseif (isset($_POST["show"])) {
+            if (
+                isset($_COOKIE["employee_ID"]) &&
+                isset($_COOKIE["Firstname"]) &&
+                isset($_COOKIE["Lastname"]) &&
+                isset($_COOKIE["Address"]) &&
+                isset($_COOKIE["Email"]) &&
+                isset($_COOKIE["Phone"])
+            ) {
+                $employeeID = $_COOKIE["employee_ID"];
+                $firstname = $_COOKIE["Firstname"];
+                $lastname = $_COOKIE["Lastname"];
+                $address = $_COOKIE["Address"];
+                $email = $_COOKIE["Email"];
+                $phone = $_COOKIE["Phone"];
 
-            echo <<<EOF
+                echo <<<EOF
 <script>
 window.onload = () => {
     document.getElementById("employee_ID").value = "$employeeID"
@@ -49,17 +49,17 @@ window.onload = () => {
 };
 </script>
 EOF;;
-        }
+            }
 
-    } elseif (isset($_POST["clear"])) {
-        setcookie("employee_ID", "", time() - 3600, "/");
-        setcookie("Firstname", "", time() - 3600, "/");
-        setcookie("Lastname", "", time() - 3600, "/");
-        setcookie("Address", "", time() - 3600, "/");
-        setcookie("Email", "", time() - 3600, "/");
-        setcookie("Phone", "", time() - 3600, "/");
+        } elseif (isset($_POST["clear"])) {
+            setcookie("employee_ID", "", time() - 3600, "/");
+            setcookie("Firstname", "", time() - 3600, "/");
+            setcookie("Lastname", "", time() - 3600, "/");
+            setcookie("Address", "", time() - 3600, "/");
+            setcookie("Email", "", time() - 3600, "/");
+            setcookie("Phone", "", time() - 3600, "/");
+        }
     }
-}
 ?>
 
 
@@ -145,27 +145,27 @@ EOF;;
         <h1>Database Data</h1>
         <?php
 
-        // 1. Connect to Database
-        class MyDB extends SQLite3 {
-            function __construct() {
-                $this->open('customers.db');
+            // 1. Connect to Database
+            class MyDB extends SQLite3 {
+                function __construct() {
+                    $this->open('customers.db');
+                }
             }
-        }
 
-        // 2_Tum. Open Database
-        $db = new MyDB();
-        //        if (!$db) {
-        //            echo $db->lastErrorMsg();
-        //        } else {
-        //            echo "Opened database successfully<br>";
-        //        }
+            // 2_Tum. Open Database
+            $db = new MyDB();
+            //        if (!$db) {
+            //            echo $db->lastErrorMsg();
+            //        } else {
+            //            echo "Opened database successfully<br>";
+            //        }
 
-        // 3. Query Execution
+            // 3. Query Execution
 
-        $sql = "SELECT * from customers";
-        $ret = $db->query($sql);
+            $sql = "SELECT * from customers";
+            $ret = $db->query($sql);
 
-        echo ' <table class="table my-table">
+            echo ' <table class="table my-table">
 <thead class="thead table-dark">
 <tr>
       <th scope = "col"> ID</th>
@@ -177,18 +177,18 @@ EOF;;
 </thead>
 <tbody>';
 
-        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-            echo "<tr class=''> ";
-            echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
-            echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
-            echo "<td> " . $row['Address'] . "</td>";
-            echo "<td> " . $row['Phone'] . "</td>";
-            echo "<td> " . $row['Email'] . "</td>";
-            echo " </tr > ";
-        }
-        echo '</tbody></table>';
-        // 4. Close database
-        $db->close();
+            while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                echo "<tr class=''> ";
+                echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
+                echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
+                echo "<td> " . $row['Address'] . "</td>";
+                echo "<td> " . $row['Phone'] . "</td>";
+                echo "<td> " . $row['Email'] . "</td>";
+                echo " </tr > ";
+            }
+            echo '</tbody></table>';
+            // 4. Close database
+            $db->close();
 
         ?>
     </div>

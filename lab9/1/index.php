@@ -40,50 +40,50 @@
     </form>
     <div class="mt-4">
         <?php
-        $servername = "127.0.0.1";
-        $username = "S089L"; //ตามที่กำหนดให้
-        $password = "JJ21666"; //ตามที่กำหนดให้
-        $dbname = "s089l";    //ตามที่กำหนดให้
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-        //        echo "Connected successfully";
+            $servername = "127.0.0.1";
+            $username = "S089L"; //ตามที่กำหนดให้
+            $password = "JJ21666"; //ตามที่กำหนดให้
+            $dbname = "s089l";    //ตามที่กำหนดให้
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            //        echo "Connected successfully";
 
-        if (isset($_GET['value'])) {
-            $number = $_GET['value'];
-            if (!empty($number))
-                showResult($number);
-        }
-
-        function showResult($rows) {
-            global $conn;
-            $sql = "SELECT * FROM course;";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                $counter = 0; // Add a counter
-                while ($row = mysqli_fetch_assoc($result)) {
-                    if ($counter == $rows) {
-                        echo "ID: " . $row["course_id"] . "<br>Tilt: " . $row["title"] .
-                            "<br>Dept. Name: " . $row["dept_name"] . "<br>Credits: " . $row["credits"] . "<br>";
-                        return;
-                    }
-                    $counter++;
-                }
-                echo "Data Not Found!";
-            } else {
-                echo "0 results";
+            if (isset($_GET['value'])) {
+                $number = $_GET['value'];
+                if (!empty($number))
+                    showResult($number);
             }
 
-        }
+            function showResult($rows) {
+                global $conn;
+                $sql = "SELECT * FROM course;";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    $counter = 0; // Add a counter
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        if ($counter == $rows) {
+                            echo "ID: " . $row["course_id"] . "<br>Tilt: " . $row["title"] .
+                                "<br>Dept. Name: " . $row["dept_name"] . "<br>Credits: " . $row["credits"] . "<br>";
+                            return;
+                        }
+                        $counter++;
+                    }
+                    echo "Data Not Found!";
+                } else {
+                    echo "0 results";
+                }
+
+            }
 
 
-        // close connection
-        mysqli_close($conn);
+            // close connection
+            mysqli_close($conn);
         ?>
     </div>
 

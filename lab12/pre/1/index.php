@@ -16,15 +16,15 @@
 </form>
 
 <?php
-if (isset($_POST["Submit"])) {
-    $data = $_POST["str1"];
-    echo "<h2>Here is your QR Code<h2>";
-    echo <<<EOF
+    if (isset($_POST["Submit"])) {
+        $data = $_POST["str1"];
+        echo "<h2>Here is your QR Code<h2>";
+        echo <<<EOF
 <img src='https://api.qrserver.com/v1/create-qr-code/?size=450x450&data=$data'>
 
 EOF;
 
-}
+    }
 ?>
 
 </body>

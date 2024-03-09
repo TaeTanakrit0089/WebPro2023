@@ -50,34 +50,34 @@
 
     <div class="mt-4" style="max-width: 250px">
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $selected_month = $_POST["month"];
-            $year = 2024;
-            $days_in_month = cal_days_in_month(CAL_GREGORIAN, $selected_month, $year);
-            $first_day_of_month = date("N", strtotime("$year-$selected_month-1"));
-            $month_name = date("F", strtotime("$year-$selected_month-1"));
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $selected_month = $_POST["month"];
+                $year = 2024;
+                $days_in_month = cal_days_in_month(CAL_GREGORIAN, $selected_month, $year);
+                $first_day_of_month = date("N", strtotime("$year-$selected_month-1"));
+                $month_name = date("F", strtotime("$year-$selected_month-1"));
 
-            echo "<h2>$month_name $year</h2>";
-            echo "<table class='table'>";
-            echo "<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>";
+                echo "<h2>$month_name $year</h2>";
+                echo "<table class='table'>";
+                echo "<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>";
 
-            $day_counter = 0;
-            $output = "<tr>";
-            for ($i = 1; $i < $first_day_of_month; $i++) {
-                $output .= "<td></td>";
-                $day_counter++;
-            }
-            for ($day = 1; $day <= $days_in_month; $day++) {
-                $output .= "<td>$day</td>";
-                $day_counter++;
-                if ($day_counter % 7 == 0) {
-                    $output .= "</tr><tr>";
+                $day_counter = 0;
+                $output = "<tr>";
+                for ($i = 1; $i < $first_day_of_month; $i++) {
+                    $output .= "<td></td>";
+                    $day_counter++;
                 }
+                for ($day = 1; $day <= $days_in_month; $day++) {
+                    $output .= "<td>$day</td>";
+                    $day_counter++;
+                    if ($day_counter % 7 == 0) {
+                        $output .= "</tr><tr>";
+                    }
+                }
+                $output .= "</tr>";
+                echo $output;
+                echo "</table>";
             }
-            $output .= "</tr>";
-            echo $output;
-            echo "</table>";
-        }
         ?>
     </div>
 </div>

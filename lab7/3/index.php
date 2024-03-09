@@ -64,60 +64,60 @@
 
 
         <?php
-        $name = "";
-        $address = "";
-        $age = "";
-        $profession = "";
-        $residential = "";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $name = isset($_POST["name"]) ? $_POST["name"] : "";
-            $address = isset($_POST["address"]) ? $_POST["address"] : "";
-            $age = isset($_POST["age"]) ? $_POST["age"] : "";
-            $profession = isset($_POST["profession"]) ? $_POST["profession"] : "";
-            $residential = isset($_POST["residential"]) ? $_POST["residential"] : "";
+            $name = "";
+            $address = "";
+            $age = "";
+            $profession = "";
+            $residential = "";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $name = isset($_POST["name"]) ? $_POST["name"] : "";
+                $address = isset($_POST["address"]) ? $_POST["address"] : "";
+                $age = isset($_POST["age"]) ? $_POST["age"] : "";
+                $profession = isset($_POST["profession"]) ? $_POST["profession"] : "";
+                $residential = isset($_POST["residential"]) ? $_POST["residential"] : "";
 
-            //            echo $residential;
-        }
+                //            echo $residential;
+            }
 
 
-        echo '
+            echo '
             <form role="form" method="post" action="index.php" onsubmit="this.form.submit()">
                 <div class="form-group">
                     <label for="email">Name:</label>
                     <input type="text" class="form-control';
-        if (strlen($name) < 5 && $name !== "")
-            echo " text-danger ";
-        echo '" name="name" id="name" placeholder="Enter name" value="' . $name . '">
+            if (strlen($name) < 5 && $name !== "")
+                echo " text-danger ";
+            echo '" name="name" id="name" placeholder="Enter name" value="' . $name . '">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Address:</label>
                     <textarea class="form-control';
-        if (strlen($address) < 5 && $address !== "")
-            echo " text-danger ";
-        echo '" name="address" id="address" placeholder="Enter address">' . $address . '</textarea>
+            if (strlen($address) < 5 && $address !== "")
+                echo " text-danger ";
+            echo '" name="address" id="address" placeholder="Enter address">' . $address . '</textarea>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Age:</label>
                     <input type="number" class="form-control';
-        echo '" name="age" id="age" placeholder="Enter age" value="' . $age . '">
+            echo '" name="age" id="age" placeholder="Enter age" value="' . $age . '">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Profession:</label>
                     <input type="text" class="form-control';
-        if (strlen($profession) < 5 && $profession !== "")
-            echo " text-danger ";
-        echo '" name="profession" id="profession" placeholder="Enter profession" value="' . $profession . '">
+            if (strlen($profession) < 5 && $profession !== "")
+                echo " text-danger ";
+            echo '" name="profession" id="profession" placeholder="Enter profession" value="' . $profession . '">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Residential Status:</label><br>
                     <input type="radio" name="residential" id="res_1" value="Resident" ';
-        if ($residential === "Resident")
-            echo ' checked';
-        echo '><label for="res_y">Resident</label>
+            if ($residential === "Resident")
+                echo ' checked';
+            echo '><label for="res_y">Resident</label>
                     <input type="radio" name="residential" id="res_2" value="Non-Resident"';
-        if ($residential === "Non-Resident")
-            echo ' checked';
-        echo '><label for="res_n">Non-Resident</label>
+            if ($residential === "Non-Resident")
+                echo ' checked';
+            echo '><label for="res_n">Non-Resident</label>
                 </div>
             
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>

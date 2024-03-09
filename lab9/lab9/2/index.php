@@ -30,40 +30,40 @@
         <div>
             <h1>Course Details</h1>
             <div <?php
-            echo 'class="' . $class . '"' ?> role="alert" style="padding: 10px; margin: 10px;">
+                echo 'class="' . $class . '"' ?> role="alert" style="padding: 10px; margin: 10px;">
                 <?php
-                echo $noti ?>
+                    echo $noti ?>
             </div>
             <form method="post">
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Course ID:</label>
                     <input type="text" name="courseID" class="form-control"
                            value="<?php
-                           if (isset($_GET['selectedID'])) {
-                               echo $_GET['selectedID'];
-                           } ?>">
+                               if (isset($_GET['selectedID'])) {
+                                   echo $_GET['selectedID'];
+                               } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Title:</label>
                     <input type="text" name="title" class="form-control" value="<?php
-                    if (isset($_GET['title'])) {
-                        echo $_GET['title'];
-                    } ?>">
+                        if (isset($_GET['title'])) {
+                            echo $_GET['title'];
+                        } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 15px">
                     <label>Department Name:</label>
                     <input type="text" name="departmentName" class="form-control"
                            value="<?php
-                           if (isset($_GET['dept_name'])) {
-                               echo $_GET['dept_name'];
-                           } ?>">
+                               if (isset($_GET['dept_name'])) {
+                                   echo $_GET['dept_name'];
+                               } ?>">
                 </div>
                 <div class="form-group" style="padding-bottom: 25px">
                     <label>Credits:</label>
                     <input type="number" name="credits" class="form-control" value="<?php
-                    if (isset($_GET['credits'])) {
-                        echo $_GET['credits'];
-                    } ?>">
+                        if (isset($_GET['credits'])) {
+                            echo $_GET['credits'];
+                        } ?>">
                 </div>
                 <button type="submit" name="submit" value="Update" class="btn btn-primary btn-lg">Update</button>
                 <button type="submit" name="submit" value="Delete" class="btn btn-danger btn-lg">Delete</button>
@@ -79,22 +79,22 @@
                     <th>Credits</th>
                 </tr>
                 <?php
-                $sql = "SELECT course_id, title, dept_name, credits
+                    $sql = "SELECT course_id, title, dept_name, credits
                     FROM course";
-                $result = mysqli_query($conn, $sql);
+                    $result = mysqli_query($conn, $sql);
 
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo "<td><a href='index.php?selectedID=" . $row["course_id"] . "&title=" . urlencode($row["title"]) . "&dept_name=" . urlencode($row["dept_name"]) . "&credits=" . $row["credits"] . "'>" . $row["course_id"] . "</a></td>";
-                        echo "<td>" . $row["title"] . "</td>";
-                        echo "<td>" . $row["dept_name"] . "</td>";
-                        echo "<td>" . $row["credits"] . "</td>";
-                        echo "</tr>";
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo "<td><a href='index.php?selectedID=" . $row["course_id"] . "&title=" . urlencode($row["title"]) . "&dept_name=" . urlencode($row["dept_name"]) . "&credits=" . $row["credits"] . "'>" . $row["course_id"] . "</a></td>";
+                            echo "<td>" . $row["title"] . "</td>";
+                            echo "<td>" . $row["dept_name"] . "</td>";
+                            echo "<td>" . $row["credits"] . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>0 results</td></tr>";
                     }
-                } else {
-                    echo "<tr><td colspan='4'>0 results</td></tr>";
-                }
                 ?>
             </table>
         </div>
@@ -102,7 +102,7 @@
 </div>
 
 <?php
-mysqli_close($conn);
+    mysqli_close($conn);
 ?>
 </body>
 

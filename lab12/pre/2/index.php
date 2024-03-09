@@ -15,15 +15,15 @@
 </form>
 
 <?php
-if (isset($_POST['submit'])) {
-    $prodid = $_POST['prodid'];
-    $url = "http://10.0.15.21/lab/lab12/restapis/products.php?prodid=" . $prodid;
-    $client = curl_init($url);
-    curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($client);
-    $result = json_decode($response)[0];
-    echo "Product ID: " . $result->ProductID . " <br>";
-}
+    if (isset($_POST['submit'])) {
+        $prodid = $_POST['prodid'];
+        $url = "http://10.0.15.21/lab/lab12/restapis/products.php?prodid=" . $prodid;
+        $client = curl_init($url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        $result = json_decode($response)[0];
+        echo "Product ID: " . $result->ProductID . " <br>";
+    }
 ?>
 
 </body>

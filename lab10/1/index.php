@@ -1,33 +1,33 @@
 <?php
 
-class MyDB extends SQLite3 {
-    function __construct() {
-        $this->open('customers.db');
+    class MyDB extends SQLite3 {
+        function __construct() {
+            $this->open('customers.db');
+        }
     }
-}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_POST["delete_last_row"] == "Delete The Last Row") {
-        // 1. Connect to Database
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if ($_POST["delete_last_row"] == "Delete The Last Row") {
+            // 1. Connect to Database
 
 
-        // 2_Tum. Open Database
-        $db = new MyDB();
-        if (!$db)
-            echo $db->lastErrorMsg();
+            // 2_Tum. Open Database
+            $db = new MyDB();
+            if (!$db)
+                echo $db->lastErrorMsg();
 
-        // 3. QUERY
-        $sql = "DELETE FROM customers WHERE CustomerId = (SELECT MAX(CustomerId) FROM customers)";
+            // 3. QUERY
+            $sql = "DELETE FROM customers WHERE CustomerId = (SELECT MAX(CustomerId) FROM customers)";
 
-        $ret = $db->exec($sql);
-        if (!$ret)
-            echo $db->lastErrorMsg();
+            $ret = $db->exec($sql);
+            if (!$ret)
+                echo $db->lastErrorMsg();
 
-        // 4. Close database
-        $db->close();
+            // 4. Close database
+            $db->close();
+        }
+        unset($_POST);
     }
-    unset($_POST);
-}
 ?>
 
 <!DOCTYPE html>
@@ -64,27 +64,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1 class="mt-3 text-center">Customers List</h1>
         <div class="mt-4"></div>
         <?php
-        // 2_Tum. Open Database
-        $db = new MyDB();
-        if (!$db)
-            echo $db->lastErrorMsg();
+            // 2_Tum. Open Database
+            $db = new MyDB();
+            if (!$db)
+                echo $db->lastErrorMsg();
 
-        // 3. Query Execution
-        $sql = "SELECT * from customers";
-        $ret = $db->query($sql);
+            // 3. Query Execution
+            $sql = "SELECT * from customers";
+            $ret = $db->query($sql);
 
 
-        $cnt = "SELECT COUNT(*) FROM customers";
-        // Execute the query and store the result object
-        $result = $db->query($cnt);
-        // Fetch the first row (which contains the count value)
-        $row = $result->fetchArray(SQLITE3_ASSOC);
-        // Extract the count value from the row
-        $count = $row["COUNT(*)"];
-        // Echo the count value
-        //    echo $count;
-        if ($count == 0) {
-            $insert_data = <<<EOF
+            $cnt = "SELECT COUNT(*) FROM customers";
+            // Execute the query and store the result object
+            $result = $db->query($cnt);
+            // Fetch the first row (which contains the count value)
+            $row = $result->fetchArray(SQLITE3_ASSOC);
+            // Extract the count value from the row
+            $count = $row["COUNT(*)"];
+            // Echo the count value
+            //    echo $count;
+            if ($count == 0) {
+                $insert_data = <<<EOF
 INSERT INTO "customers" VALUES (1,'Luís','Gonçalves','Embraer - Empresa Brasileira de Aeronáutica S.A.','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','luisg@embraer.com.br',3);
 INSERT INTO "customers" VALUES (2_Tum,'Leonie','Köhler',NULL,'Theodor-Heuss-Straße 34','Stuttgart',NULL,'Germany','70174','+49 0711 2842222',NULL,'leonekohler@surfeu.de',5);
 INSERT INTO "customers" VALUES (3,'François','Tremblay',NULL,'1498 rue Bélanger','Montréal','QC','Canada','H2G 1A7','+1 (514) 721-4711',NULL,'ftremblay@gmail.com',3);
@@ -106,8 +106,8 @@ INSERT INTO "customers" VALUES (18,'Michelle','Brooks',NULL,'627 Broadway','New 
 INSERT INTO "customers" VALUES (19,'Tim','Goyer','Apple Inc.','1 Infinite Loop','Cupertino','CA','USA','95014','+1 (408) 996-1010','+1 (408) 996-1011','tgoyer@apple.com',3);
 INSERT INTO "customers" VALUES (20,'Dan','Miller',NULL,'541 Del Medio Avenue','Mountain View','CA','USA','94040-111','+1 (650) 644-3358',NULL,'dmiller@comcast.com',4);
 EOF;
-            $db->exec($insert_data);
-            echo '<script>
+                $db->exec($insert_data);
+                echo '<script>
 window.onload = async function(){
     function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -119,8 +119,8 @@ window.onload = async function(){
           // will open new tab on window.onload
     }
 </script>';
-        }
-        echo ' <table class="table my-table">
+            }
+            echo ' <table class="table my-table">
 <thead class="thead table-dark">
 <tr>
       <th scope = "col"> ID</th>
@@ -132,24 +132,24 @@ window.onload = async function(){
 </thead>
 <tbody>';
 
-        //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
-        //        echo "Database is empty";
+            //    if ($ret->fetchArray(SQLITE3_ASSOC) === false)
+            //        echo "Database is empty";
 
-        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-            echo "<tr class=''> ";
-            echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
-            echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
-            echo "<td> " . $row['Address'] . "</td>";
-            echo "<td> " . $row['Phone'] . "</td>";
-            echo "<td> " . $row['Email'] . "</td>";
-            echo " </tr > ";
-        }
-        echo '</tbody></table>';
-        //    echo "Operation done successfully < br>";
+            while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                echo "<tr class=''> ";
+                echo "<th scope = 'row'> " . $row['CustomerId'] . "</th> ";
+                echo "<td> " . $row['FirstName'] . " " . $row['LastName'] . "</td> ";
+                echo "<td> " . $row['Address'] . "</td>";
+                echo "<td> " . $row['Phone'] . "</td>";
+                echo "<td> " . $row['Email'] . "</td>";
+                echo " </tr > ";
+            }
+            echo '</tbody></table>';
+            //    echo "Operation done successfully < br>";
 
 
-        // 4. Close database
-        $db->close();
+            // 4. Close database
+            $db->close();
 
 
         ?>

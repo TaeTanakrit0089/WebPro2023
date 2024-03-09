@@ -1,10 +1,10 @@
 <?php
-include_once 'process.php';
-// web service URL
-$url = "http://10.0.15.21/lab/lab12/restapis/products.php?list=10";
-$response = file_get_contents($url);
-$dataPoints = json_decode($response);
-$dataConverted = convert_json($dataPoints);
+    include_once 'process.php';
+    // web service URL
+    $url = "http://10.0.15.21/lab/lab12/restapis/products.php?list=10";
+    $response = file_get_contents($url);
+    $dataPoints = json_decode($response);
+    $dataConverted = convert_json($dataPoints);
 
 
 ?>

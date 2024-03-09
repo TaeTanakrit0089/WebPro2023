@@ -11,19 +11,19 @@
     <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <?php
-function generateMultiplicationTable($number) {
-    echo "<table class=\"\" style=\"width: 240px; font-size: 22px\"><tbody>";
-    for ($i = 1; $i <= 12; $i++) {
-        echo "<tr>";
-        echo "<td>$number</td>" .
-            "<td>x</td>" .
-            "<td>$i</td>" .
-            "<td>=</td>" .
-            "<td>" . $number * $i . "</td>";
-        echo "</tr>";
+    function generateMultiplicationTable($number) {
+        echo "<table class=\"\" style=\"width: 240px; font-size: 22px\"><tbody>";
+        for ($i = 1; $i <= 12; $i++) {
+            echo "<tr>";
+            echo "<td>$number</td>" .
+                "<td>x</td>" .
+                "<td>$i</td>" .
+                "<td>=</td>" .
+                "<td>" . $number * $i . "</td>";
+            echo "</tr>";
+        }
+        echo "</tbody></table>";
     }
-    echo "</tbody></table>";
-}
 
 ?>
 
@@ -56,11 +56,11 @@ function generateMultiplicationTable($number) {
     </form>
     <div class="mt-4">
         <?php
-        if (isset($_GET['value'])) {
-            $number = $_GET['value'];
-            if (!empty($number))
-                generateMultiplicationTable($number);
-        }
+            if (isset($_GET['value'])) {
+                $number = $_GET['value'];
+                if (!empty($number))
+                    generateMultiplicationTable($number);
+            }
         ?></div>
 
 

@@ -1,5 +1,5 @@
 <?php
-include('../connectDB.php');
+    include('../connectDB.php');
 ?>
 
 <!DOCTYPE html>
@@ -41,27 +41,27 @@ include('../connectDB.php');
             <th>Building</th>
         </tr>
         <?php
-        $sql = "SELECT course.course_id, course.title, course.dept_name, section.year, section.semester, section.building
+            $sql = "SELECT course.course_id, course.title, course.dept_name, section.year, section.semester, section.building
         FROM course
         JOIN section 
         ON course.course_id = section.course_id ";
-        $result = mysqli_query($conn, $sql);
+            $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>";
-                echo "<td>" . $row["course_id"] . "</td>";
-                echo "<td>" . $row["title"] . "</td>";
-                echo "<td>" . $row["dept_name"] . "</td>";
-                echo "<td>" . $row["year"] . "</td>";
-                echo "<td>" . $row["semester"] . "</td>";
-                echo "<td>" . $row["building"] . "</td>";
-                echo "</tr>";
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td>" . $row["course_id"] . "</td>";
+                    echo "<td>" . $row["title"] . "</td>";
+                    echo "<td>" . $row["dept_name"] . "</td>";
+                    echo "<td>" . $row["year"] . "</td>";
+                    echo "<td>" . $row["semester"] . "</td>";
+                    echo "<td>" . $row["building"] . "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "0 results";
             }
-        } else {
-            echo "0 results";
-        }
         ?>
     </table>
 </div>

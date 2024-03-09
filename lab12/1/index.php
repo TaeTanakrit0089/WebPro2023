@@ -1,15 +1,15 @@
 <?php
 
-$index = isset($_GET['index']) ? intval($_GET['index']) : 0;
-$url = "http://10.0.15.21/lab/lab12/restapis/products.php";
-$response = file_get_contents($url);
-$result = json_decode($response);
-$response_size = count($result);
-if ($response_size < $index)
-    $index = $response_size;
-if (0 > $index)
-    $index = 0;
-$result_data = $result[$index]
+    $index = isset($_GET['index']) ? intval($_GET['index']) : 0;
+    $url = "http://10.0.15.21/lab/lab12/restapis/products.php";
+    $response = file_get_contents($url);
+    $result = json_decode($response);
+    $response_size = count($result);
+    if ($response_size < $index)
+        $index = $response_size;
+    if (0 > $index)
+        $index = 0;
+    $result_data = $result[$index]
 ?>
 
 <!DOCTYPE html>
@@ -44,33 +44,33 @@ $result_data = $result[$index]
 
 <div class="" id="body_container" style="padding-top: 54px !important">
     <?php
-    function print_array($array) {
-        foreach ($array as $item) {
-            echo $item . ' ';
+        function print_array($array) {
+            foreach ($array as $item) {
+                echo $item . ' ';
+            }
         }
-    }
 
-    $url = "http://10.0.15.21/lab/lab12/restapis/10countries.json";
-    $response = file_get_contents($url);
-    $result = json_decode($response);
+        $url = "http://10.0.15.21/lab/lab12/restapis/10countries.json";
+        $response = file_get_contents($url);
+        $result = json_decode($response);
 
-    foreach ($result as $country) {
-        echo <<<EOF
+        foreach ($result as $country) {
+            echo <<<EOF
 <div id="intro" class="mt-4 flex-row d-flex flex-grow flex-wrap gap-4">
         <div class="quiz-container blur-effect country_box">
 EOF;
 
-        echo '<h1 class="text-center">' . $country->name . '</h1>';
-        echo '<div class="d-flex flex-row gap-3 justify-content-between">';
-        echo '<div>';
-        echo '<div><strong>Capital: </strong>' . $country->capital . '</div>';
-        echo '<div><strong>Population: </strong>' . number_format($country->population) . '</div>';
-        echo '<div><strong>Regions: </strong>' . $country->region . '</div>';
-        echo '<div><strong>Location: </strong>' . $country->latlng[0] . ', ' . $country->latlng[1] . '</div>';
-        echo '<div><strong>Border: </strong>';
-        print_array($country->borders);
-        echo '</div>';
-        echo <<<EOF
+            echo '<h1 class="text-center">' . $country->name . '</h1>';
+            echo '<div class="d-flex flex-row gap-3 justify-content-between">';
+            echo '<div>';
+            echo '<div><strong>Capital: </strong>' . $country->capital . '</div>';
+            echo '<div><strong>Population: </strong>' . number_format($country->population) . '</div>';
+            echo '<div><strong>Regions: </strong>' . $country->region . '</div>';
+            echo '<div><strong>Location: </strong>' . $country->latlng[0] . ', ' . $country->latlng[1] . '</div>';
+            echo '<div><strong>Border: </strong>';
+            print_array($country->borders);
+            echo '</div>';
+            echo <<<EOF
 </div>
         <div>
             <img class="rounded" src="$country->flag" alt="" width="400">
@@ -80,7 +80,7 @@ EOF;
 </div>
 EOF;
 
-    }
+        }
 
     ?>
     <!--    <div id="intro" class="mt-4 flex-row d-flex flex-grow flex-wrap gap-4">-->

@@ -1,34 +1,34 @@
 <?php
-include('../connectDB.php');
+    include('../connectDB.php');
 
-$course_id = "";
-$name = "";
-$dept_name = "";
-$salary = "";
-$error = "";
+    $course_id = "";
+    $name = "";
+    $dept_name = "";
+    $salary = "";
+    $error = "";
 
-if (isset($_POST['submit']) && isset($_POST['recordNumber'])) {
-    $recordNumber = $_POST['recordNumber'];
+    if (isset($_POST['submit']) && isset($_POST['recordNumber'])) {
+        $recordNumber = $_POST['recordNumber'];
 
-    $sql = "SELECT * FROM instructor;";
-    $result = mysqli_query($conn, $sql);
+        $sql = "SELECT * FROM instructor;";
+        $result = mysqli_query($conn, $sql);
 
-    if ($recordNumber > mysqli_num_rows($result) || $recordNumber <= 0) {
-        $error = "Error: Invalid Record Number";
-    }
+        if ($recordNumber > mysqli_num_rows($result) || $recordNumber <= 0) {
+            $error = "Error: Invalid Record Number";
+        }
 
-    if ($result && mysqli_num_rows($result) > 0) {
-        for ($i = 0; $row = mysqli_fetch_assoc($result); $i++) {
-            if (($i + 1) == $recordNumber) {
-                $course_id = $row["ID"];
-                $name = $row["name"];
-                $dept_name = $row["dept_name"];
-                $salary = $row["salary"];
-                break;
+        if ($result && mysqli_num_rows($result) > 0) {
+            for ($i = 0; $row = mysqli_fetch_assoc($result); $i++) {
+                if (($i + 1) == $recordNumber) {
+                    $course_id = $row["ID"];
+                    $name = $row["name"];
+                    $dept_name = $row["dept_name"];
+                    $salary = $row["salary"];
+                    break;
+                }
             }
         }
     }
-}
 ?>
 
 <!DOCTYPE html>
@@ -73,17 +73,17 @@ if (isset($_POST['submit']) && isset($_POST['recordNumber'])) {
 <div class="body-container">
     <h1>Instructor Info</h1>
     <span style="color: red; padding: 20px;"><?php
-        echo $error ?></span>
+            echo $error ?></span>
     <div style="padding-left: 40px; padding-top: 10px">
         <form method="post" action="index.php">
             <label>Instructor ID: <span style="color: red;"><?php
-                    echo $course_id; ?></span> </label> <br><br>
+                        echo $course_id; ?></span> </label> <br><br>
             <label>Name: <span style="color: red;"><?php
-                    echo $name; ?></span></label> <br><br>
+                        echo $name; ?></span></label> <br><br>
             <label>Dept Name: <span style="color: red;"><?php
-                    echo $dept_name; ?></span></label> <br><br>
+                        echo $dept_name; ?></span></label> <br><br>
             <label>Salary: <span style="color: red;"><?php
-                    echo $salary; ?></span></label> <br><br>
+                        echo $salary; ?></span></label> <br><br>
             <label>Enter a record number:</label>
             <input type="number" id="recordNumber" name="recordNumber"><br><br>
             <button class="button" type="submit" id="submit" name="submit" value="submit">Display</button>
@@ -92,7 +92,7 @@ if (isset($_POST['submit']) && isset($_POST['recordNumber'])) {
 </div>
 
 <?php
-mysqli_close($conn);
+    mysqli_close($conn);
 ?>
 </body>
 

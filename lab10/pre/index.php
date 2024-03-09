@@ -14,62 +14,62 @@
 
 <?php
 
-// 1. Connect to Database
-class MyDB extends SQLite3 {
-    function __construct() {
-        $this->open('lab10-file.db');
+    // 1. Connect to Database
+    class MyDB extends SQLite3 {
+        function __construct() {
+            $this->open('lab10-file.db');
+        }
     }
-}
 
-// 2_Tum. Open Database
-$db = new MyDB();
-if (!$db) {
-    echo $db->lastErrorMsg();
-} else {
-    echo "Opened database successfully<br>";
-}
+    // 2_Tum. Open Database
+    $db = new MyDB();
+    if (!$db) {
+        echo $db->lastErrorMsg();
+    } else {
+        echo "Opened database successfully<br>";
+    }
 
-// 3. Query Execution
-//$sql = "CREATE TABLE questions (
-//QID INTEGER PRIMARY KEY AUTOINCREMENT,
-//Stem VARCHAR(150) NOT NULL,
-//Alt_A VARCHAR(50) NOT NULL,
-//Alt_B VARCHAR(50) NOT NULL,
-//Alt_C VARCHAR(50) NOT NULL,
-//Alt_D VARCHAR(50) NOT NULL,
-//Correct VARCHAR(3) NOT NULL
-//);";
+    // 3. Query Execution
+    //$sql = "CREATE TABLE questions (
+    //QID INTEGER PRIMARY KEY AUTOINCREMENT,
+    //Stem VARCHAR(150) NOT NULL,
+    //Alt_A VARCHAR(50) NOT NULL,
+    //Alt_B VARCHAR(50) NOT NULL,
+    //Alt_C VARCHAR(50) NOT NULL,
+    //Alt_D VARCHAR(50) NOT NULL,
+    //Correct VARCHAR(3) NOT NULL
+    //);";
 
-//$sql = "INSERT INTO questions (Stem, Alt_A, Alt_B, Alt_C, Alt_D, Correct)
-//VALUES ('What is the full form of SQL?','Structured Query List',
-//'Structure Query Language','Sample Query Language',
-//'None of these','B');";
-//
-//$ret = $db->exec($sql);
-//if (!$ret) {
-//    echo $db->lastErrorMsg();
-//} else {
-//    echo "Table created successfully<br>";
-//}
+    //$sql = "INSERT INTO questions (Stem, Alt_A, Alt_B, Alt_C, Alt_D, Correct)
+    //VALUES ('What is the full form of SQL?','Structured Query List',
+    //'Structure Query Language','Sample Query Language',
+    //'None of these','B');";
+    //
+    //$ret = $db->exec($sql);
+    //if (!$ret) {
+    //    echo $db->lastErrorMsg();
+    //} else {
+    //    echo "Table created successfully<br>";
+    //}
 
 
-$sql = "SELECT * from questions";
-$ret = $db->query($sql);
+    $sql = "SELECT * from questions";
+    $ret = $db->query($sql);
 
-while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-    echo " " . $row['QID'] . " ";
-    echo " " . $row['Stem'] . " ";
-    echo " " . $row['Alt_A'] . "<br>";
-    echo " " . $row['Alt_B'] . "<br>";
-    echo " " . $row['Alt_C'] . "<br>";
-    echo " " . $row['Alt_D'] . "<br>";
-    echo " " . $row['Correct'] . "<br>";
-}
+    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+        echo " " . $row['QID'] . " ";
+        echo " " . $row['Stem'] . " ";
+        echo " " . $row['Alt_A'] . "<br>";
+        echo " " . $row['Alt_B'] . "<br>";
+        echo " " . $row['Alt_C'] . "<br>";
+        echo " " . $row['Alt_D'] . "<br>";
+        echo " " . $row['Correct'] . "<br>";
+    }
 
-echo "Operation done successfully<br>";
+    echo "Operation done successfully<br>";
 
-// 4. Close database
-$db->close();
+    // 4. Close database
+    $db->close();
 
 ?>
 

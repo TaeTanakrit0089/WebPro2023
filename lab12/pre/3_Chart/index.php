@@ -1,8 +1,8 @@
 <?php
-// web service URL
-$url = "http://10.0.15.21/lab/lab12/restapis/ws-for-barchart.php";
-$response = file_get_contents($url);
-$dataPoints = json_decode($response);
+    // web service URL
+    $url = "http://10.0.15.21/lab/lab12/restapis/ws-for-barchart.php";
+    $response = file_get_contents($url);
+    $dataPoints = json_decode($response);
 ?>
 
 <!DOCTYPE html>
