@@ -58,7 +58,8 @@ $result_data = $result[$index]
                     <img class="rounded" src="https://www.it.kmitl.ac.th/~sooksan/sooksan.jpg" alt="">
                 </div>
             </div>
-        </div><div class="quiz-container blur-effect country_box">
+        </div>
+        <div class="quiz-container blur-effect country_box">
             <h1 class="text-center">Brazil</h1>
             <div class="d-flex flex-row gap-3 justify-content-between">
                 <div>
