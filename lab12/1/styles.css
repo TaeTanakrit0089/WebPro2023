@@ -19,7 +19,7 @@
 }
 
 #intro div {
-    font-size: larger;
+    font-size: large;
 }
 
 body {
@@ -46,6 +46,16 @@ body {
     border-radius: 22px;
     padding: 32px;
 
+}
+
+.country_box {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .country_box {
+        width: 100%;
+    }
 }
 
 #result, #question {

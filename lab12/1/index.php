@@ -43,46 +43,51 @@ $result_data = $result[$index]
 
 
 <div class="" id="body_container" style="padding-top: 54px !important">
-    <div id="intro" class="mt-4 quiz-container  blur-effect">
-        <h1>Product Details</h1>
-        <div>
-            <strong>ID: </strong>
-            <?php
-            echo $result_data->ProductID ?>
-        </div>
-        <div>
-            <strong>Code: </strong>
-            <?php
-            echo $result_data->ProductCode ?>
-        </div>
-        <div>
-            <strong>Name: </strong>
-            <?php
-            echo $result_data->ProductName ?>
-        </div>
-        <div>
-            <strong>Description: </strong>
-            <?php
-            echo $result_data->Description ?>
-        </div>
-        <div>
-            <strong>Price: </strong>
-            <?php
-            echo $result_data->UnitPrice ?>
-        </div>
-        <form class="mt-4" id="CourseForm" method="get">
-            <div class="d-flex flex-row form-group gap-4">
-                <button value="<?php
-                echo ($index <= 0) ? 0 : $index - 1; ?>" type="submit" class="btn btn-primary" name="index">Previous
-                    Data
-                </button>
-                <button value="<?php
-                echo ($index + 1 >= $response_size - 1) ? $response_size - 1 : $index + 1; ?>" type="submit"
-                        class="btn btn-primary"
-                        name="index">Next Data
-                </button>
+    <div id="intro" class="mt-4 flex-row d-flex flex-grow flex-wrap gap-4">
+        <div class="quiz-container blur-effect country_box">
+            <h1 class="text-center">Brazil</h1>
+            <div class="d-flex flex-row gap-3 justify-content-between">
+                <div>
+                    <div><strong>Capital: </strong>Brass</div>
+                    <div><strong>Population: </strong>Brass</div>
+                    <div><strong>Regions: </strong>Brass</div>
+                    <div><strong>Location: </strong>Brass</div>
+                    <div><strong>Borders: </strong>Brass</div>
+                </div>
+                <div>
+                    <img class="rounded" src="https://www.it.kmitl.ac.th/~sooksan/sooksan.jpg" alt="">
+                </div>
             </div>
-        </form>
+        </div><div class="quiz-container blur-effect country_box">
+            <h1 class="text-center">Brazil</h1>
+            <div class="d-flex flex-row gap-3 justify-content-between">
+                <div>
+                    <div><strong>Capital: </strong>Brass</div>
+                    <div><strong>Population: </strong>Brass</div>
+                    <div><strong>Regions: </strong>Brass</div>
+                    <div><strong>Location: </strong>Brass</div>
+                    <div><strong>Borders: </strong>Brass</div>
+                </div>
+                <div>
+                    <img class="rounded" src="https://www.it.kmitl.ac.th/~sooksan/sooksan.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="quiz-container blur-effect country_box">
+            <h1 class="text-center">Brazil</h1>
+            <div class="d-flex flex-row gap-3 justify-content-between">
+                <div>
+                    <div><strong>Capital: </strong>Brass</div>
+                    <div><strong>Population: </strong>Brass</div>
+                    <div><strong>Regions: </strong>Brass</div>
+                    <div><strong>Location: </strong>Brass</div>
+                    <div><strong>Borders: </strong>Brass</div>
+                </div>
+                <div>
+                    <img class="rounded" src="https://www.it.kmitl.ac.th/~sooksan/sooksan.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
