@@ -1,0 +1,303 @@
+[
+  {
+    "ProductID": "1",
+    "ProductCode": "B-1",
+    "ProductName": "Chai",
+    "Description": "Black tea with a blend of cardamom, ginger, cloves and cinnamon",
+    "UnitPrice": 18
+  },
+  {
+    "ProductID": "2",
+    "ProductCode": "CO-3",
+    "ProductName": "Syrup",
+    "Description": "Pure cane syrup",
+    "UnitPrice": 10
+  },
+  {
+    "ProductID": "3",
+    "ProductCode": "CO-4",
+    "ProductName": "Cajun Seasoning",
+    "Description": "Adds zingy new taste to meat, seafood, vegetables, eggs and more",
+    "UnitPrice": 22
+  },
+  {
+    "ProductID": "4",
+    "ProductCode": "O-5",
+    "ProductName": "Olive Oil",
+    "Description": "Extra virgin for smooth taste and versatility",
+    "UnitPrice": 21.35
+  },
+  {
+    "ProductID": "5",
+    "ProductCode": "JP-6",
+    "ProductName": "Boysenberry Spread",
+    "Description": "Boy, some berries. A delicious alternative topping for toast, pancakes and waffles",
+    "UnitPrice": 25
+  },
+  {
+    "ProductID": "6",
+    "ProductCode": "DFN-7",
+    "ProductName": "Dried Pears",
+    "Description": "A sweet treat for hikers and snackers",
+    "UnitPrice": 30
+  },
+  {
+    "ProductID": "7",
+    "ProductCode": "S-8",
+    "ProductName": "Curry Sauce",
+    "Description": "Thai style red curry sauce is a zesty blend of red chili puree, coconut milk, onions, garlic and ginger",
+    "UnitPrice": 40
+  },
+  {
+    "ProductID": "8",
+    "ProductCode": "DFN-14",
+    "ProductName": "Walnuts",
+    "Description": "Shelled, energy-dense and loaded with polyunsaturated good fats. Perfect baking and snacking",
+    "UnitPrice": 23.25
+  },
+  {
+    "ProductID": "9",
+    "ProductCode": "CFV-17",
+    "ProductName": "Fruit Cocktail",
+    "Description": "Diced peaches, pears, pineapple and sweet cherries in heavy syrup",
+    "UnitPrice": 39
+  },
+  {
+    "ProductID": "10",
+    "ProductCode": "BGM-19",
+    "ProductName": "Chocolate Biscuits Mix",
+    "Description": "A flaky, buttery, chocolatey twist on traditional biscuits",
+    "UnitPrice": 9.2
+  },
+  {
+    "ProductID": "12",
+    "ProductCode": "BGM-21",
+    "ProductName": "Scones",
+    "Description": "The perfect accompaniment to coffee or proper tea",
+    "UnitPrice": 10
+  },
+  {
+    "ProductID": "13",
+    "ProductCode": "B-34",
+    "ProductName": "Beer",
+    "Description": "Belgian-style: a flavorful, balanced beer with characteristics of hops, malt and fruity yeast",
+    "UnitPrice": 14
+  },
+  {
+    "ProductID": "14",
+    "ProductCode": "CM-40",
+    "ProductName": "Crab Meat",
+    "Description": "Authentic Maryland Blue crab meat, packed by hand",
+    "UnitPrice": 18.4
+  },
+  {
+    "ProductID": "15",
+    "ProductCode": "SO-41",
+    "ProductName": "Clam Chowder",
+    "Description": "New England style with a creamy base, with generous portions of clams and bacon",
+    "UnitPrice": 9.65
+  },
+  {
+    "ProductID": "16",
+    "ProductCode": "B-43",
+    "ProductName": "Coffee",
+    "Description": "Pre-ground medium roast is a full-flavored blend of 100% Arabica beans from Guatemala and Ethiopia",
+    "UnitPrice": 46
+  },
+  {
+    "ProductID": "17",
+    "ProductCode": "CA-48",
+    "ProductName": "Chocolate",
+    "Description": "Smooth and satisfying, 72% cacao for an antioxidant boost",
+    "UnitPrice": 12.75
+  },
+  {
+    "ProductID": "18",
+    "ProductCode": "DFN-51",
+    "ProductName": "Dried Apples",
+    "Description": "Apple chips for lunchboxes and snacks are high in fiber and nutrients",
+    "UnitPrice": 53
+  },
+  {
+    "ProductID": "19",
+    "ProductCode": "G-52",
+    "ProductName": "Long Grain Rice",
+    "Description": "Premium white Basmati",
+    "UnitPrice": 7
+  },
+  {
+    "ProductID": "20",
+    "ProductCode": "P-56",
+    "ProductName": "Gnocchi",
+    "Description": "Traditional Italian potato dumplings, fully-cooked; ready to heat and eat",
+    "UnitPrice": 38
+  },
+  {
+    "ProductID": "21",
+    "ProductCode": "P-57",
+    "ProductName": "Ravioli",
+    "Description": "Tender pasta envelopes filled with ricotta cheese and spinach",
+    "UnitPrice": 19.5
+  },
+  {
+    "ProductID": "22",
+    "ProductCode": "S-65",
+    "ProductName": "Hot Pepper Sauce",
+    "Description": "Hot stuff! Adds tastebud-searing warmth to any dish",
+    "UnitPrice": 21.05
+  },
+  {
+    "ProductID": "23",
+    "ProductCode": "S-66",
+    "ProductName": "Tomato Sauce",
+    "Description": "Delicately seasoned with salt, pepper and herbs",
+    "UnitPrice": 17
+  },
+  {
+    "ProductID": "24",
+    "ProductCode": "D-72",
+    "ProductName": "Mozzarella",
+    "Description": "Fresh, mild and cheesy; a staple of Italian cuisine",
+    "UnitPrice": 34.8
+  },
+  {
+    "ProductID": "25",
+    "ProductCode": "DFN-74",
+    "ProductName": "Almonds",
+    "Description": "Premium almonds from Californias Central Valley",
+    "UnitPrice": 10
+  },
+  {
+    "ProductID": "26",
+    "ProductCode": "CO-77",
+    "ProductName": "Mustard",
+    "Description": "Stone-ground dijon-style prepared mustard",
+    "UnitPrice": 13
+  },
+  {
+    "ProductID": "27",
+    "ProductCode": "DFN-80",
+    "ProductName": "Dried Plums",
+    "Description": "Dense, sweet dried plums: the perfect snack for people on the go",
+    "UnitPrice": 3.5
+  },
+  {
+    "ProductID": "28",
+    "ProductCode": "B-81",
+    "ProductName": "Green Tea",
+    "Description": "Authentic green tea leaves, dried quickly after harvest to preserve their vibrant color and naturally occurring antioxidants",
+    "UnitPrice": 2.99
+  },
+  {
+    "ProductID": "29",
+    "ProductCode": "C-82",
+    "ProductName": "Granola",
+    "Description": "A super crunchy treat: Oats loaded with almonds, walnuts, hazelnuts, raisins, coconut and dried cranberry",
+    "UnitPrice": 4
+  },
+  {
+    "ProductID": "30",
+    "ProductCode": "CS-83",
+    "ProductName": "Potato Chips",
+    "Description": "Kettle-cooked crispy snackers",
+    "UnitPrice": 1.8
+  },
+  {
+    "ProductID": "31",
+    "ProductCode": "BGM-85",
+    "ProductName": "Brownie Mix",
+    "Description": "Rich and fudgy, for a dense, chewy brownie with fudge topping",
+    "UnitPrice": 12.49
+  },
+  {
+    "ProductID": "32",
+    "ProductCode": "BGM-86",
+    "ProductName": "Cake Mix",
+    "Description": "Versatile yellow mix for moist, fluffy cakes and cupcakes",
+    "UnitPrice": 15.99
+  },
+  {
+    "ProductID": "33",
+    "ProductCode": "B-87",
+    "ProductName": "Tea",
+    "Description": "Robust black tea leaves have rich flavor, dark color, and a smooth finish",
+    "UnitPrice": 4
+  },
+  {
+    "ProductID": "34",
+    "ProductCode": "CFV-88",
+    "ProductName": "Pears",
+    "Description": "Organic red D Anjou pears, ripened to pear-fection",
+    "UnitPrice": 1.3
+  },
+  {
+    "ProductID": "35",
+    "ProductCode": "CFV-89",
+    "ProductName": "Peaches",
+    "Description": "Delicious, juicy freestone peaches suitable for canning, baking and snacking",
+    "UnitPrice": 1.5
+  },
+  {
+    "ProductID": "36",
+    "ProductCode": "CFV-90",
+    "ProductName": "Pineapple",
+    "Description": "Fresh from Hawaii: ripe, succulent whole fruits",
+    "UnitPrice": 1.8
+  },
+  {
+    "ProductID": "37",
+    "ProductCode": "CFV-91",
+    "ProductName": "Cherry Pie Filling",
+    "Description": "Real, whole, tart cherries hand-picked at their peak",
+    "UnitPrice": 2
+  },
+  {
+    "ProductID": "38",
+    "ProductCode": "CFV-92",
+    "ProductName": "Green Beans",
+    "Description": "Whole fresh green beans picked in their prime",
+    "UnitPrice": 1.2
+  },
+  {
+    "ProductID": "39",
+    "ProductCode": "CFV-93",
+    "ProductName": "Corn",
+    "Description": "Delicious, tender tri-color sweet corn on the cob",
+    "UnitPrice": 1.2
+  },
+  {
+    "ProductID": "40",
+    "ProductCode": "CFV-94",
+    "ProductName": "Peas",
+    "Description": "Baby green peas in the pod, ready for shucking",
+    "UnitPrice": 1.5
+  },
+  {
+    "ProductID": "41",
+    "ProductCode": "CM-95",
+    "ProductName": "Tuna Fish",
+    "Description": "Wild-caught solid-white albacore tuna packed in water",
+    "UnitPrice": 2
+  },
+  {
+    "ProductID": "42",
+    "ProductCode": "CM-96",
+    "ProductName": "Smoked Salmon",
+    "Description": "From the Pacific Northwests pristine icy cold waters and hardwood-smoked",
+    "UnitPrice": 4
+  },
+  {
+    "ProductID": "44",
+    "ProductCode": "SO-98",
+    "ProductName": "Vegetable Soup",
+    "Description": "Farm-fresh diced vegetable medley in a rich vegetable broth",
+    "UnitPrice": 1.89
+  },
+  {
+    "ProductID": "45",
+    "ProductCode": "SO-99",
+    "ProductName": "Chicken Soup",
+    "Description": "To warm the soul. Rich broth chock-full of tender chicken, fresh diced vegetables and hearty egg noodles",
+    "UnitPrice": 1.95
+  }
+]
