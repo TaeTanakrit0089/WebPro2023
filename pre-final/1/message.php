@@ -56,7 +56,7 @@
             if (strcmp($row['username'], $form_username) == 0 && strcmp($row['password'], $form_password) == 0) {
                 $sesid = session_id();
                 $_SESSION['sid'] = $sesid;
-                $_SESSION['username'] = $form_username;
+                $_SESSION['userid'] = $row['id'];
                 $_SESSION['password'] = $form_password;
                 $message = "Log in Success";
                 break;
