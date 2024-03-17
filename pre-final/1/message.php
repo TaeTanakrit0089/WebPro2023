@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 
     // 1. Connect to Database
     class MyDB extends SQLite3 {
@@ -40,12 +40,27 @@
             $message = "The username already exist";
         else {
             $sql = <<<EOF
-   INSERT INTO user (username, password, name)
-   VALUES ('$form_username', '$form_password', '$form_name');
-   EOF;
+       INSERT INTO user (username, password, name)
+       VALUES ('$form_username', '$form_password', '$form_name');
+       EOF;
 
             $ret = $db->exec($sql);
             $message = "Created " . $form_username;
+        }
+    } else if (isset($_POST["username"])) {
+        $form_username = $_POST["username"];
+        $form_password = $_POST["password"];
+        $message = "Log in Fail";
+
+        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+            if (strcmp($row['username'], $form_username) == 0 && strcmp($row['password'], $form_password) == 0) {
+                $sesid = session_id();
+                $_SESSION['sid'] = $sesid;
+                $_SESSION['username'] = $form_username;
+                $_SESSION['password'] = $form_password;
+                $message = "Log in Success";
+                break;
+            }
         }
     }
 

@@ -1,4 +1,9 @@
 <?php
+    // Start the session
+    session_start();
+    $sesid = session_id();
+    // display Session ID
+    echo "Session ID : " . session_id();
 
     // 1. Connect to Database
     class MyDB extends SQLite3 {
@@ -42,6 +47,17 @@
     <title>65070089</title>
 </head>
 <body>
-
+<a href="login.php">
+    <button>login</button>
+</a>
+<a href="register.php">
+    <button>register</button>
+</a>
+<?php
+        if (isset($_SESSION['sid']) && $_SESSION['sid'] == $sesid) {
+            echo '<h1>This account is already logged in.</h1>';
+        } else {
+            echo '<h1>You are not logged in.</h1>';
+        } ?>
 </body>
 </html>
