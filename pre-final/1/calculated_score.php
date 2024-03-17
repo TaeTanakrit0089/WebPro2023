@@ -38,10 +38,12 @@
     $message = $score;
 
     $db = new MyDB();
+    $userid = $_SESSION["userid"];
 
     $sql = $sql =<<<EOF
-   INSERT INTO user (Score)
-   VALUES ($score);
+   UPDATE user
+   SET score = $score
+   WHERE id = $userid
    EOF;
     $result = $db->exec($sql);
 

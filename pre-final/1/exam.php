@@ -44,8 +44,8 @@
     }
 
     $db->close();
-    echo $_SESSION["problem_number"] . '<br>';
-    print_r($_SESSION["answers"]);
+//    echo $_SESSION["problem_number"] . '<br>';
+//    print_r($_SESSION["answers"]);
 
 ?>
 
