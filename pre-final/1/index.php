@@ -1,6 +1,7 @@
 <?php
     // Start the session
     session_start();
+    unset($_SESSION["problem_number"]);
     $sesid = session_id();
     // display Session ID
 
@@ -13,11 +14,11 @@
 
     // 2. Open Database
     $db = new MyDB();
-//    if (!$db) {
-//        echo $db->lastErrorMsg();
-//    } else {
-//        echo "Opened database successfully<br>";
-//    }
+    //    if (!$db) {
+    //        echo $db->lastErrorMsg();
+    //    } else {
+    //        echo "Opened database successfully<br>";
+    //    }
 
     // 3. Query Execution
     // SQL Statements
@@ -50,13 +51,16 @@
     <a href="logout.php">
         <button>logout</button>
     </a>
+    <a href="exam.php">
+        <button>exam</button>
+    </a>
 </div>
 
 <?php
     if (isset($_SESSION['sid']) && $_SESSION['sid'] == $sesid) {
-        echo '<h1>This account is already logged in.</h1>';
+        echo '<h1>This account is already logged in.' . ' ' . ' </h1 > ';
     } else {
-        echo '<h1>You are not logged in.</h1>';
+        echo '<h1 > You are not logged in .</h1 > ';
     } ?>
 </body>
 </html>
