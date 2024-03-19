@@ -23,9 +23,9 @@
     $row = $result->fetchArray(SQLITE3_ASSOC);
     $all_question = $row['MAX(QID)'];
 
-//    echo $_SESSION["problem_number"];
-//    echo $all_question;
-//    echo '<br>';
+    //    echo $_SESSION["problem_number"];
+    //    echo $all_question;
+    //    echo '<br>';
 
     if ($_SESSION["problem_number"] >= $all_question - 1) {
         header("Location:calculated_score.php");
@@ -44,8 +44,8 @@
     }
 
     $db->close();
-//    echo $_SESSION["problem_number"] . '<br>';
-//    print_r($_SESSION["answers"]);
+    //    echo $_SESSION["problem_number"] . '<br>';
+    //    print_r($_SESSION["answers"]);
 
 ?>
 

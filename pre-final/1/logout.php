@@ -5,7 +5,7 @@
 
     session_destroy();
 
-//    echo '<h2>You have cleaned session</h2>';
+    //    echo '<h2>You have cleaned session</h2>';
     header('Refresh: 3; URL = index.html');
 ?>
 <!doctype html>

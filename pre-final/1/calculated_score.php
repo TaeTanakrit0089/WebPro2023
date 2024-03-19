@@ -40,7 +40,7 @@
     $db = new MyDB();
     $userid = $_SESSION["userid"];
 
-    $sql = $sql =<<<EOF
+    $sql = $sql = <<<EOF
    UPDATE user
    SET score = $score
    WHERE id = $userid
