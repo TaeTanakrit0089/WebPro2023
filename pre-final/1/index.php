@@ -37,8 +37,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div>
